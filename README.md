@@ -167,6 +167,19 @@
         <strong>Mac (Non-disponible)</strong>
         <span class="arrow">→</span>
       </a>
+    <!-- MAC (Non-disponible) -->
+<a
+  href="https://ko-fi.com/vitaedonation"
+  target="_blank"
+  rel="noopener noreferrer"
+  style="display: inline-flex; align-items: center; gap: 10px; background-color: #29abe0; color: #ffffff; padding: 12px 20px; border-radius: 30px; text-decoration: none; font-family: sans-serif; font-size: 15px; box-shadow: 0 4px 12px rgba(41, 171, 224, 0.25); transition: background-color 0.3s ease;"
+  onmouseover="this.style.backgroundColor='#1f94c4'"
+  onmouseout="this.style.backgroundColor='#29abe0'"
+>
+  <img src="https://storage.ko-fi.com/cdn/cup-small.png" alt="Ko-fi Logo" style="width: 20px; height: 20px; object-fit: contain;" />
+  <strong>Donation Kofi</strong>
+  <span style="transition: transform 0.2s ease;">→</span>
+</a>
 
     </div>
 
