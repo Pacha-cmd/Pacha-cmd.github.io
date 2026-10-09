@@ -160,18 +160,18 @@
       <!-- MAC (Non-disponible) -->
       <a
         class="download"
-        href="https://mega.nz/"
+        href="Indisponible"
         target="_blank"
         rel="noopener noreferrer"
       >
-        <strong>Mac</strong>
+        <strong>Mac (Non-disponible)</strong>
         <span class="arrow">→</span>
       </a>
 
     </div>
 
     <div class="date">
-      Publiée le 07/10/2026
+      Publiée le 09/10/2026
     </div>
 
   </main>
