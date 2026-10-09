@@ -130,7 +130,7 @@
     </div>
 
     <div class="version">
-      Version <strong>Vitae-1.0.0-rc.11</strong>
+      Version <strong>Vitae-1.0.0-rc.14</strong>
     </div>
 
     <div class="downloads">
