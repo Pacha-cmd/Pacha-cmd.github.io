@@ -130,7 +130,7 @@
     </div>
 
     <div class="version">
-      Version <strong>Vitae-1.0.0-rc.15</strong>
+      Version <strong>Vitae-1.0.0-rc.16</strong>
     </div>
 
     <div class="downloads">
@@ -138,7 +138,7 @@
       <!-- WINDOWS -->
       <a
         class="download"
-        href="https://mega.nz/file/kFUW3CqS#U3rwgOjE324ll_43NomdYL909Hx1aWICywPbdw028rY"
+        href="https://mega.nz/file/0YF3xRqJ#MCJloxR26n_gnhPB74a02srRPwhIcPz-eD0U49BWoHc"
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -149,7 +149,7 @@
       <!-- ANDROID -->
       <a
         class="download"
-        href="https://mega.nz/file/9UETWILK#qWlqYrg6jCJiCOOV2g9_6Xfqtjctc-_r9_iwEHTH9wk"
+        href="https://mega.nz/file/0BVHACCD#VOkQPPbbylB50De5O45RMQo7VHLWaEk-7RwUCB6_9lM"
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -184,7 +184,7 @@
     </div>
 
     <div class="date">
-      Publiée le 11/10/2026
+      Publiée le 12/10/2026
     </div>
 
   </main>
