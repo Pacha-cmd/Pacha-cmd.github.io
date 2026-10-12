@@ -138,7 +138,7 @@
       <!-- WINDOWS -->
       <a
         class="download"
-        href="https://mega.nz/file/0YF3xRqJ#MCJloxR26n_gnhPB74a02srRPwhIcPz-eD0U49BWoHc"
+        href="https://mega.nz/file/8UdXmRBJ#-ktHjYTAad_xosB-8hwxhTLJIu-cGjJR_KSsRroLkuo"
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -149,7 +149,7 @@
       <!-- ANDROID -->
       <a
         class="download"
-        href="https://mega.nz/file/0BVHACCD#VOkQPPbbylB50De5O45RMQo7VHLWaEk-7RwUCB6_9lM"
+        href="https://mega.nz/file/NNdmCaJD#-eAqfMbpbMdIwkNorwLDxTc1wQaO_Y5TzJ1M7EsajSY"
         target="_blank"
         rel="noopener noreferrer"
       >
