@@ -142,7 +142,7 @@
         target="_blank"
         rel="noopener noreferrer"
       >
-        <strong>Windows</strong>
+        <strong>Windows - Vitae.exe</strong>
         <span class="arrow">→</span>
       </a>
 
@@ -153,7 +153,7 @@
         target="_blank"
         rel="noopener noreferrer"
       >
-        <strong>Android</strong>
+        <strong>Android - Vitae.apk</strong>
         <span class="arrow">→</span>
       </a>
 
