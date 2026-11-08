@@ -1,0 +1,9 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+h1 a[href="/"],
+h1 a[href="https://pacha-cmd.github.io/"] {
+    display: none;
+}
