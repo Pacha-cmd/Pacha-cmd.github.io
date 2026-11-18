@@ -66,6 +66,25 @@ section.block { padding-block: clamp(2.5rem, 6vw, 4.5rem); border-top: 1px solid
 .news { margin: 0; padding-left: 1.25rem; color: var(--soft); max-width: 70ch; }
 .news li + li { margin-top: 0.6rem; }
 .news li::marker { color: var(--gold); }
+.history__lead { margin: -0.75rem 0 2rem; color: var(--soft); max-width: 60ch; }
+.history__back { display: inline-block; margin-bottom: 1.5rem; color: var(--soft); }
+.version { border-top: 1px solid var(--line); }
+.version:last-child { border-bottom: 1px solid var(--line); }
+.version summary { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.25rem 1.25rem; padding-block: 1rem; cursor: pointer; list-style: none; }
+.version summary::-webkit-details-marker { display: none; }
+.version summary::before { content: "+"; width: 1.25rem; color: var(--gold); font-family: var(--sans); }
+.version[open] summary::before { content: "−"; }
+.version summary:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+.version__name { font-size: 1.375rem; }
+.version__date { color: var(--soft); font-size: 1rem; }
+.version__tag { margin-left: auto; padding: 0.1rem 0.7rem; border: 1px solid var(--gold); border-radius: 999px; color: var(--gold); font: 400 0.875rem var(--sans); }
+.version__body { padding: 0 0 1.5rem 2.5rem; max-width: 72ch; }
+.version__body p { margin: 0 0 1rem; color: var(--soft); }
+.version__body h3 { margin: 1.25rem 0 0.5rem; font-size: 1.125rem; font-weight: 400; color: var(--ink); }
+.version__body ul { margin: 0; padding-left: 1.25rem; color: var(--soft); }
+.version__body li + li { margin-top: 0.5rem; }
+.version__body li::marker { color: var(--gold); }
+body.is-history .hero, body.is-history main > section.block:not(#historique) { display: none; }
 .author { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.5rem 1.5rem; }
 .author p { margin: 0; }
 footer { padding-block: 2.5rem 3rem; color: var(--faint); font-size: 0.95rem; border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.75rem; }
@@ -90,6 +109,7 @@ footer { padding-block: 2.5rem 3rem; color: var(--faint); font-size: 0.95rem; bo
     <a href="#telecharger">Télécharger</a>
     <a href="#fonctionnalites">Fonctionnalités</a>
     <a href="#confidentialite">Confidentialité</a>
+    <a href="#historique">Historique</a>
     <a href="#auteur">Auteur</a>
   </nav>
 </header>
@@ -114,42 +134,42 @@ footer { padding-block: 2.5rem 3rem; color: var(--faint); font-size: 0.95rem; bo
         <li class="download" data-mood="joyeux">
           <span class="download__name">Android</span>
           <span class="download__detail">Téléphone ou tablette, Android 7 ou plus récent</span>
-          <a class="download__get" href="https://mega.nz/file/5RVhmQrb#-mUaIaQMidYK4MjPdPg4iviypfxgXLdw9qwTY37ju_E">Télécharger <small>2,1 Mo</small></a>
+          <a class="download__get" href="https://mega.nz/folder/FF81XaxT#3Cfq_uj5_o6cPg1qLlVRxA" target="_blank" rel="noopener noreferrer">Télécharger</a>
         </li>
         <li class="download" data-mood="malicieux">
           <span class="download__name">Linux</span>
           <span class="download__detail">Ubuntu, Debian, Fedora, Arch… (64 bits)</span>
-          <a class="download__get" href="https://mega.nz/file/EIURyCgD#C13pKonNZhap0TS_YYEVwo3xjs5YcXIp7VrJZ5HVBl0">Télécharger <small>1,9 Mo</small></a>
+          <a class="download__get" href="https://mega.nz/folder/0UsWGKTD#r5R1sKx50ptyk943WbcMRw" target="_blank" rel="noopener noreferrer">Télécharger</a>
         </li>
         <li class="download" data-mood="complice">
           <span class="download__name">Windows (programme d’installation)</span>
           <span class="download__detail">Windows 10 ou 11 (64 bits) : un assistant, « Installer » puis « Terminer »</span>
-          <a class="download__get" href="https://mega.nz/file/pMl1mb7R#KfOQ9IIIBXZr6R0TMSeS3xUIumUUPSSJDECA7us7Zcg">Télécharger <small>1,8 Mo</small></a>
+          <a class="download__get" href="https://mega.nz/folder/sB00GaYa#L6q2RkrqvxXzl24n0TlfHQ" target="_blank" rel="noopener noreferrer">Télécharger</a>
         </li>
         <li class="download" data-mood="complice">
           <span class="download__name">Windows (le programme seul)</span>
           <span class="download__detail">Le même, sans assistant : il propose de s’installer à son premier lancement</span>
-          <a class="download__get" href="https://mega.nz/file/4ZF2yCCZ#7KzxrVgYWPgGQn7AWfZbxTpnSU6WS7qlLpHx9IFwCDo">Télécharger <small>5,4 Mo</small></a>
+          <a class="download__get" href="telechargements/Vitae-2.0.0-rc.7.exe" download>Télécharger </a>
         </li>
         <li class="download" data-mood="joyeux">
           <span class="download__name">VitaePDF (Android)</span>
           <span class="download__detail">Un lecteur de PDF léger, en complément : à installer à part, sans aucune autorisation</span>
-          <a class="download__get" href="https://mega.nz/file/dMlQhYSC#azHYkv1u89hIoQaiDDxTkKNQqRZYvW6SxH452SJeysU">Télécharger <small>16 Ko</small></a>
+          <a class="download__get" href="telechargements/VitaePDF-2.0.0-rc.7.apk" download>Télécharger </a>
         </li>
         <li class="download" data-mood="attentif">
           <span class="download__name">Dans un navigateur</span>
           <span class="download__detail">Une seule page, à ouvrir avec Chrome, Edge, Firefox ou Safari</span>
-          <a class="download__get" href="https://mega.nz/file/BU9SnJhY#-Ob5BzwOsaOWA0syr53xt2LxsaHjYnel6-tgv9MhsnU">Télécharger <small>5,1 Mo</small></a>
+          <a class="download__get" href="https://mega.nz/folder/QAc1FTbS#43ftzV4z4cYbIub75j6azQ" target="_blank" rel="noopener noreferrer">Télécharger</a>
         </li>
         <li class="download" data-mood="joyeux">
           <span class="download__name">iPhone et iPad</span>
           <span class="download__detail">Ouvrez Vitae dans Safari, puis Partager › « Sur l’écran d’accueil » : plein écran, hors ligne</span>
-          <a class="download__get" href="https://mega.nz/file/BU9SnJhY#-Ob5BzwOsaOWA0syr53xt2LxsaHjYnel6-tgv9MhsnU">Ouvrir Vitae</a>
+          <a class="download__get" href="https://mega.nz/folder/QAc1FTbS#43ftzV4z4cYbIub75j6azQ" target="_blank" rel="noopener noreferrer">Ouvrir Vitae</a>
         </li>
         <li class="download" data-mood="attentif">
           <span class="download__name">Mac</span>
           <span class="download__detail">Ouvrez Vitae dans Safari, puis Fichier › « Ajouter au Dock » (ou « Installer » dans Chrome et Edge)</span>
-          <a class="download__get" href="https://mega.nz/file/BU9SnJhY#-Ob5BzwOsaOWA0syr53xt2LxsaHjYnel6-tgv9MhsnU">Ouvrir Vitae</a>
+          <a class="download__get" href="https://mega.nz/folder/QAc1FTbS#43ftzV4z4cYbIub75j6azQ" target="_blank" rel="noopener noreferrer">Ouvrir Vitae</a>
         </li>
       </ul>
     </div>
@@ -194,6 +214,832 @@ footer { padding-block: 2.5rem 3rem; color: var(--faint); font-size: 0.95rem; bo
     </div>
   </section>
 
+  <section class="block" id="historique" aria-labelledby="titre-historique">
+    <div class="wrap">
+      <a class="history__back" href="#telecharger" data-back>← Retour au site</a>
+      <h2 id="titre-historique">Historique des versions</h2>
+      <p class="history__lead">Toutes les versions de Vitae, de la plus récente à la plus ancienne. Ouvrez une version pour voir ce qu’elle a changé.</p>
+      <details class="version" open>
+        <summary><span class="version__name">Vitae 2.0.0-rc.7</span><span class="version__date">18 novembre 2026</span><span class="version__tag">Version actuelle</span></summary>
+        <div class="version__body">
+          <p>Une Culture plus compacte sur un ordinateur, des accès rapides aux plateformes de musique et aux sites de livres, une image pour chaque restaurant, et des cartes mentales qu'on reconnaît à leur couleur. Aucun changement de schéma.</p>
+          <h3>Nouveautés</h3>
+          <ul>
+            <li>Des grilles plus compactes sur un PC. La grille de 4 devient la grille de 6, celle de 6 la grille de 9 : des images bien plus petites sur un grand écran (Cinéma, Musique, Livres, Jeux, Auteurs·trices, Restaurants). Le choix que vous aviez fait est repris (4 → 6, 6 → 9). Sur un téléphone, rien ne change.</li>
+            <li>Musique : « Trouver l'album ». Dans la fiche d'un album, un bouton par plateforme — YouTube Music, Spotify, Deezer, SoundCloud, Apple Music, Bandcamp — et par site de référence (MusicBrainz, Discogs, Wikipédia) ouvre sa recherche avec le titre et l'artiste. Copiez l'adresse de la page de l'album, revenez, « Coller » : la fiche se remplit (titre, artiste, année, morceaux, pochette). Et dans la présentation d'un album, « Écouter sur » mène aux plateformes d'un appui.</li>
+            <li>Livres : « Trouver le livre ». Le même principe : Wikipédia, Babelio, Goodreads, Open Library, Google Livres, Decitre, et pour les mangas MyAnimeList, AniList, Nautiljon. Une adresse collée remplit la fiche — par son ISBN (une librairie), Open Library, Google Livres, ou ce que Wikidata sait de la page (Babelio, Goodreads, MyAnimeList). « Voir sur » dans la présentation d'un livre.</li>
+            <li>Restaurants : une image de couverture. L'adresse d'une image, ou un fichier de votre appareil ; elle s'affiche dans la galerie et en tête de la fiche du restaurant, et une copie est gardée dans Vitae.</li>
+            <li>Cartes mentales : chaque carte dans sa couleur. Une carte de la liste prend la couleur que portent le plus de ses idées (un fond teinté, un bandeau en haut), son nom écrit en premier et en grand : on la reconnaît sans l'ouvrir. La couleur se coupe dans les réglages de la page.</li>
+            <li>Cartes mentales et Flash cards : quatre affichages, comme la Culture — liste serrée, liste, grille de 6, grille de 9 —, retenus d'une visite à l'autre.</li>
+          </ul>
+        </div>
+      </details>
+      <details class="version">
+        <summary><span class="version__name">Vitae 2.0.0-rc.6</span><span class="version__date">17 novembre 2026</span></summary>
+        <div class="version__body">
+          <p>Vitae arrive sur iPhone, iPad et Mac, et Windows a un vrai programme d'installation. Les pages et les données ne changent pas : c'est la même application, sur deux appareils de plus. Aucun changement de schéma.</p>
+          <h3>Nouveautés</h3>
+          <ul>
+            <li>iPhone et iPad. Vitae s'installe depuis Safari, sans App Store : ouvrir pacha-cmd.github.io/app/, toucher Partager, puis « Sur l'écran d'accueil ». Vitae a alors son icône, s'ouvre en plein écran et marche sans réseau ; vos données restent sur l'appareil. Au premier passage dans Safari, Vitae dit où toucher.</li>
+            <li>Mac. La même application web : dans Safari, Fichier › « Ajouter au Dock » (macOS Sonoma ou plus récent) ; dans Chrome ou Edge, « Installer » — Vitae le propose d'un message. Elle s'ouvre dans sa fenêtre, depuis le Dock ou le Launchpad, même hors ligne.</li>
+            <li>Les mises à jour de l'application web se font seules : une nouvelle version publiée se télécharge à l'ouverture suivante, puis Vitae propose « Relancer ». Elle ne s'impose jamais pendant qu'on écrit.</li>
+            <li>Windows : un programme d'installation. Vitae-2.0.0-rc.6-installation.exe est un assistant habituel, en français et sans droits d'administrateur (Bienvenue, Installer, puis « Ouvrir Vitae »). L'installation est la même que celle de Vitae.exe, qui reste proposé seul : mêmes raccourcis, même désinstallation par « Applications installées », données jamais touchées. Il met à jour une version plus ancienne et n'écrase jamais une plus récente. Pour un déploiement, /S installe sans question.</li>
+            <li>Le site propose les deux fichiers de Windows, et un bouton « Ouvrir Vitae » pour l'iPhone, l'iPad et le Mac, avec la marche à suivre.</li>
+          </ul>
+        </div>
+      </details>
+      <details class="version">
+        <summary><span class="version__name">Vitae 2.0.0-rc.5</span><span class="version__date">17 novembre 2026</span></summary>
+        <div class="version__body">
+          <p>La suite de l'audit : ce que la rc.4 avait laissé étroit sur un ordinateur, le premier lancement redessiné, la Santé en blocs, et des pages Notes, Tâches, Auteurs·trices et Jeux plus faciles. La direction artistique ne change pas ; elle est maintenant écrite en un seul endroit, docs/DIRECTION-ARTISTIQUE.md. Aucun changement de schéma.</p>
+          <h3>Nouveautés</h3>
+          <ul>
+            <li>Toute la largeur, sur toutes les pages. La rc.4 avait élargi les pages principales ; 115 sous-pages sur 204 (formulaires, fiches, listes de la Comptabilité, écrans de Santé, réglages) restaient une colonne de 672 px sur 1 920. Désormais, aucune page n'est une colonne étroite au milieu de l'écran : un long formulaire range ses champs en deux colonnes (le titre et « Enregistrer » sur toute la largeur), les blocs d'une page se rangent en deux ou trois colonnes, une liste seule aussi, un formulaire court garde sa largeur de saisie sous le titre ; une recette met ses ingrédients à côté de sa préparation, l'affiche d'une œuvre grandit avec la page. Le texte garde sa colonne de lecture. Sur un téléphone, rien ne change.</li>
+            <li>Premier lancement redessiné. Sur un grand écran, les étapes sont à gauche (faites, en cours, à venir ; « Étape 3 sur 6 » est la troisième) et l'écran à droite ; le premier écran présente Vitae en trois cartes, puis les deux choix en grandes options. Sur un téléphone, une barre d'étapes au-dessus du titre.</li>
+            <li>« Choisissez ce que vous voulez voir » : chaque case ne change qu'elle-même. La case « Tout afficher », qui montrait une grille toute cochée quand on la décochait (on croyait que les cases se recochaient seules), devient un bouton qui recoche tout. Le compte se lit en clair ; une favorite cachée puis remontrée reste favorite. Le même bouton dans Paramètres › Accueil et recherche.</li>
+            <li>La grille de 6 a vraiment six colonnes, et la grille de 4, quatre (trois et deux sur un téléphone). Sur un grand écran, la rc.4 en montrait huit : le choix était retenu, mais ne se voyait pas. Vérifié sur Cinéma, Livres, Musique, Restaurants et Auteurs·trices (Jeux suit le même code) : le choix revient après être sorti de la page et après un redémarrage.</li>
+            <li>Tâches : « Aujourd'hui » et « Par catégorie » mettent la liste à gauche, l'évolution et les statistiques à droite ; « À venir » range ses jours en colonnes.</li>
+            <li>Notes : la note ouverte (« Nouvelle note ») prend toute la page — la barre d'outils sur une ligne, la surface d'écriture jusqu'au bas de l'écran. Les dossiers : un nom long ne se coupe plus au milieu d'un mot (deux lignes au plus, coupé à une syllabe s'il le faut, le nom entier en bulle), et un crayon dans le coin de chaque dossier le renomme sur place (Entrée enregistre, Échap annule).</li>
+            <li>Santé en blocs : les indicateurs en cartes, trois par rangée (deux quand la place manque) ; « À vérifier » et « Pages de Santé » à droite, en haut ; les suivis à renseigner (rendez-vous, douleurs et symptômes, charge mentale…) remontés sous la saisie rapide, au lieu d'être tout en bas.</li>
+            <li>Auteurs·trices : les portraits — remplis depuis Wikipédia avec le reste de la fiche, ou d'une adresse d'image ; « Chercher les portraits » (menu « ⋯ ») les trouve pour toutes les fiches qui n'en ont pas. Les quatre affichages de la Culture (liste serrée, liste, grille de 4, grille de 6), avec les mêmes éléments.</li>
+            <li>Jeux : en écrivant le titre, Wikidata (la base libre de Wikipédia, sans clé ni compte) propose les jeux qui portent ce nom ; en choisir un remplit la fiche — studio ou auteur, année, plateformes, genres, joueurs, résumé, image. Et « Trouver le jeu » : un bouton par site de référence (Wikipédia, Jeuxvideo.com, MobyGames, IGDB, RAWG, Steam ; BoardGameGeek pour les jeux de société) ouvre sa recherche avec le titre ; on copie l'adresse de la page du jeu, on revient, « Coller » : Vitae reconnaît le jeu (Wikidata connaît son identifiant sur ces sites) et remplit la fiche.</li>
+            <li>La direction artistique, écrite : docs/DIRECTION-ARTISTIQUE.md réunit l'identité, la largeur sur ordinateur, les blocs et les cartes, les formats d'affichage, les portraits, le premier lancement et les gestes communs, pour que les prochaines évolutions la suivent.</li>
+          </ul>
+        </div>
+      </details>
+      <details class="version">
+        <summary><span class="version__name">Vitae 2.0.0-rc.4</span><span class="version__date">17 novembre 2026</span></summary>
+        <div class="version__body">
+          <p>Un audit complet de l'application (docs/AUDIT-2026-11.md), puis sa mise au propre, sans toucher à la direction artistique : mêmes couleurs, même police, mêmes formes, même mascotte. Aucun changement de schéma : les données ne bougent pas ; ce qui est nouveau sur l'appareil (page d'ouverture, pages récentes) reste sur l'appareil.</p>
+          <h3>Nouveautés</h3>
+          <ul>
+            <li>Vitae sur un grand écran. Chaque page prend la forme qui convient à son usage, au lieu d'une colonne de téléphone au milieu d'un écran vide (à 1 920 px, 60 % de l'écran restait vide) : - les pages du jour (Sommeil, Humeur, Hydratation, Pas, Pilulier, Vie, Ma journée, Suggestion du jour, la synthèse de la Comptabilité) mettent la saisie à gauche et ce qu'on relit (évolution, statistiques, historique) à droite ; - les grilles et les longues listes (Notes, Liens, Collections, Flash cards, Auteurs, Cartes mentales, paniers, Culture, Recettes, Restaurants) prennent toute la largeur utile : 6 à 8 affiches par ligne, deux ou trois colonnes de lignes ; - l'accueil garde son haut centré, et met « Aujourd'hui » et les raccourcis côte à côte ; - les Paramètres rangent leurs catégories en deux colonnes, et un écran ouvert garde le sommaire à sa gauche : on passe d'un réglage à l'autre sans revenir en arrière. Les colonnes se règlent sur la place qu'a la page (menu ouvert ou réduit, fenêtre partagée, tablette tournée) ; sur un téléphone, rien ne change de place.</li>
+            <li>« Aller à… » : Ctrl+K (⌘K sur un Mac), depuis n'importe quel écran, ou le bouton en tête du menu, ou la loupe de la barre du haut d'un téléphone. Avant de taper, les pages ouvertes récemment, puis les favorites ; en tapant, la même recherche que l'accueil. Flèches, Entrée, Échap.</li>
+            <li>Premier lancement : « Votre Vitae ». Une dernière étape, courte et qu'on peut passer : les pages à montrer (« Tout afficher » coché d'office), les favorites, la page sur laquelle Vitae s'ouvre.</li>
+            <li>La page d'ouverture : Vitae peut s'ouvrir sur une page plutôt que sur l'accueil (Paramètres › Accueil et recherche). Un lien vers une page précise y mène toujours.</li>
+            <li>Cinéma : le filtre « Genre », comme Livres, Musique et Jeux ; les filtres des quatre pages dans le même ordre (statut, genre, tri, regroupement).</li>
+            <li>Plus rapide : Tâches s'ouvre en 300 ms au lieu de 550 avec trois ans de données ; Cinéma, avec 600 films, en 220 ms au lieu de 780.</li>
+            <li>Cohérence : la croix des champs de recherche n'est plus bleue ; le cœur des recettes favorites est le pictogramme de Vitae ; la ligne « API et services en ligne » a son pictogramme ; les couleurs des pages de PDF sont des jetons ; les noms de pages ne se coupent plus au milieu d'un mot dans les grilles de choix.</li>
+          </ul>
+        </div>
+      </details>
+      <details class="version">
+        <summary><span class="version__name">Vitae 2.0.0-rc.3</span><span class="version__date">16 novembre 2026</span></summary>
+        <div class="version__body">
+          <p>Ajouts sans changement de schéma (champs facultatifs, absents tant qu'ils ont leur valeur de départ).</p>
+          <h3>Nouveautés</h3>
+          <ul>
+            <li>Pages culturelles : tri et classement. Les mêmes commandes sur Cinéma, Livres, Musique (albums et morceaux), Jeux, Auteurs et Restaurants : « Trier par », un bouton qui dit le sens du tri (croissant, décroissant) et l'inverse, et, sur les quatre collections d'œuvres, « Regrouper par » — statut, genre, décennie, réalisateur, auteur, artiste, plateforme, sorte de jeu — avec un titre et un compteur par groupe. Une œuvre n'apparaît que dans un seul groupe (le premier genre, le premier auteur). Nouveaux tris : genre (Livres, Musique, Jeux) et studio (Jeux). Le regroupement est un réglage de l'appareil, emporté par la sauvegarde ; le tri des morceaux est enfin retenu.</li>
+            <li>Traduction automatique des descriptions. Une case discrète, en bas des fiches de Cinéma, Livres, Musique et Jeux (et des recettes en anglais) : seules les descriptions se traduisent — jamais un titre, un nom d'auteur, de réalisateur ou de développeur, ni vos propres notes. Un texte déjà en français, ou dont la langue est incertaine, reste tel quel. Traducteur de l'appareil s'il existe, sinon MyMemory (dit à côté de la case) ; « Voir l'original » d'un appui ; rien n'est écrit dans les données. Les films et les albums gardent désormais une description (facultative) venue d'OMDb, de TMDB ou à saisir.</li>
+            <li>Paramètres › API : une page qui réunit tous les services en ligne de Vitae — ce que chacun sert, ce qui lui est envoyé, où obtenir une clé — et les clés, au même endroit. Nouvelles clés : TheTVDB (séries du Cinéma) et MyAnimeList (mangas des Livres), s'ajoutant à OMDb et TMDB ; elles restent aussi dans les réglages de Cinéma et de Livres.</li>
+            <li>Menu : cliquer sur une page ne ramène plus la barre de gauche tout en haut (la page s'affichait bien, mais le menu se redessinait). Elle garde sa position, sur ordinateur comme dans le panneau d'un téléphone.</li>
+            <li>Images : « Garder une copie de l'image dans Vitae » est cochée d'office.</li>
+            <li>Tâches : la ligne continue le long des colonnes est retirée ; les petits marqueurs de couleur restent.</li>
+            <li>Accueil : « Tâches » et « Agenda » mieux délimités (titres, filets, jauge de progression), sans changer le dessin.</li>
+            <li>Cohérence : Musique reçoit sa mascotte comme les autres pages culturelles ; les morceaux et les auteurs ont la même barre de recherche et de tri que les collections ; Restaurants a « Afficher en liste » dans son menu comme les autres.</li>
+          </ul>
+        </div>
+      </details>
+      <details class="version">
+        <summary><span class="version__name">Vitae 2.0.0-rc.2</span><span class="version__date">16 novembre 2026</span></summary>
+        <div class="version__body">
+          <p>Ajouts sans changement de schéma (champs facultatifs, valeurs de départ).</p>
+          <h3>Nouveautés</h3>
+          <ul>
+            <li>VitaePDF : une page est ramenée à la largeur de l'écran par une matrice d'échelle (auparavant, le rendu se faisait à raison d'un point du PDF par pixel : un PDF d'images aux dimensions énormes s'affichait agrandi et coupé). Rapport hauteur/largeur retenu, préchargement de la page suivante, pages sorties de l'écran non dessinées, hauteur bornée.</li>
+            <li>Menu : la barre de gauche et le panneau d'un téléphone gardent leur position de défilement d'une page à l'autre.</li>
+            <li>Accueil : un point de couleur (celle de l'événement ou de la tâche, sinon de sa catégorie) et le pictogramme devant chaque ligne d'« Agenda » et de « Tâches » ; les séances des emplois du temps figurent dans l'agenda (réglage « Séances dans l'agenda de l'accueil », dans les réglages de l'emploi du temps).</li>
+            <li>Réglages : la liste des pages proposées devient une grille « pictogramme + titre », neuf par ligne, qui se resserre selon la place.</li>
+            <li>Sauvegardes : le bloc facultatif dispositions emporte les choix d'affichage de l'appareil (liste ou grille, affiches par ligne, vue des tâches, pages épinglées, menu réduit…) ; une restauration les remet, « réunir » ne remplace pas ceux que l'appareil a déjà.</li>
+            <li>Pages culturelles : un seul dialogue de choix d'image (aperçu large avant validation, langues et éditions) pour les affiches de films (TMDB), couvertures de livres (Open Library) et pochettes d'albums (Cover Art Archive) ; copie locale facultative, réduite, qui voyage avec la sauvegarde ; « Compléter les fiches » pour Livres et Musique, image comprise, avec contrôle que le titre (et l'auteur ou l'artiste) trouvé est bien le bon ; Cinéma n'associe plus un film d'une autre année.</li>
+            <li>Cinéma : « Ouvrir IMDb » sous le titre d'un film, pour retrouver sa fiche en un appui.</li>
+            <li>Rappels avancés : un événement ou une tâche peut avoir plusieurs séries de rappels (un premier délai, puis une répétition, jusqu'à l'heure), avec l'aperçu des heures où ils sonneront ; chaque rappel a un identifiant stable, donc jamais donné deux fois.</li>
+            <li>Pilulier : la prochaine prise en tête, une section « À surveiller » (prises en retard, stock bas, renouvellement, cures), des couleurs d'indication discrètes (désactivables).</li>
+            <li>Comptabilité : revenus et dépenses se distinguent d'un coup d'œil (barres, montants, liseré) ; réglage « Couleurs d'indication ».</li>
+            <li>Emploi du temps : un pictogramme propre à chaque séance ou série, dont les exceptions se demandent (cette séance, la série, les suivantes).</li>
+            <li>Notes de pages : on choisit les pages dont on voit les notes, dans une vraie sélection ; les dossiers portent le pictogramme de leur page.</li>
+            <li>Sommeil › Coucher et réveil : heures visées, jusqu'à huit alarmes (jours, nom, marche / arrêt), rappel du coucher, et les dernières nuits comparées au plan (écarts, sommeil à rattraper). Une alarme est un rappel de Vitae, pas l'alarme du système.</li>
+            <li>Hydratation : rappels « intelligents » (seulement si l'on est en retard sur le rythme du jour ou sans boisson depuis un délai choisi).</li>
+            <li>Santé : la silhouette gagne des repères anatomiques ; toucher une zone ouvre sa fiche (ce qu'on y trouve, comment la décrire, zones proches) et la choisit ou la retire.</li>
+            <li>Chrono : durées du Pomodoro réglables, barres de progression, +1 / +5 minutes, tours (meilleur, plus lent), reprise là où on s'était arrêté.</li>
+          </ul>
+        </div>
+      </details>
+      <details class="version">
+        <summary><span class="version__name">Vitae 2.0.0-rc.1</span><span class="version__date">16 novembre 2026</span></summary>
+        <div class="version__body">
+          <h3>Nouveautés</h3>
+          <ul>
+            <li>Un parcours plus simple. Le remplissage automatique des fiches (une piste d'évolution) est désormais réservé au mode développeur : il n'apparaît plus dans les réglages ni dans les formulaires.</li>
+            <li>Des couleurs de pages, discrètes. Cinq couleurs, prises parmi celles des étiquettes, tiennent lieu de famille aux pages (Santé, Culture, Argent…) : un liseré, un pictogramme, jamais un fond. Paramètres › Apparence › « Couleurs des pages » les éteint toutes d'un geste.</li>
+            <li>Partage et synchronisation d'un coup d'œil. En tête de la page Partages : l'état de la synchronisation de vos appareils (active, en attente, en erreur, non branchée), la dernière passe, les modifications croisées, et chaque partage avec qui, ce qu'il porte et son état. Chaque ligne mène à l'écran où l'on règle ou arrête ; rien ne s'active tout seul.</li>
+            <li>Auteurs·trices reliés au reste. Quand une personne citée dans un film, un livre, un album ou un jeu n'est pas dans vos Auteurs·trices, Vitae demande : « Voulez-vous ajouter cette personne à votre page Auteur / Autrice ? ». Elle est alors créée et liée ; si elle existe déjà, Vitae propose de la lier. Sa fiche liste ses œuvres (plusieurs rôles possibles), l'œuvre montre ses personnes, et un refus n'est pas reposé.</li>
+            <li>Livres et PDF. Le PDF se joint dès l'ajout du livre, et s'ouvre d'un appui à l'enregistrement. Un lecteur de plus, VitaePDF (Android, livré avec Vitae, sans aucune autorisation) : Vitae ne lui confie un PDF que si vous l'y avez autorisé dans les réglages des Livres. Pour les autres systèmes, des lecteurs libres sont proposés.</li>
+            <li>Flash cards et cartes mentales en vraies cartes, sobres. Recettes en grille de cartes, comme le Cinéma. Pas, Pilulier : plus de hiérarchie, plus visuels.</li>
+            <li>Comptabilité › Opérations : un bandeau Total / Pointées / Non pointées avec leurs sommes, une barre de synthèse, et « Tout pointer » / « Tout dépointer » avec confirmation.</li>
+            <li>Tâches : une tâche en retard depuis plus d'une semaine propose, discrètement, de redéfinir son échéance.</li>
+            <li>Notes : de nouveaux pictogrammes pour les dossiers, dont ℹ️. Calendrier : les emplois du temps parmi les catégories. Hydratation : des volumes usuels en un appui. Cinéma : accès rapide à IMDb.</li>
+            <li>Accueil : la recherche à côté du Résumé du jour ; la mascotte s'endort et se réveille ; les QR codes (rejoindre un partage, brancher un appareil) sont vérifiés, et un lecteur natif qui échoue ne bloque plus la caméra.</li>
+          </ul>
+          <h3>Améliorations</h3>
+          <ul>
+            <li>Les Paramètres sont plus serrés (une ligne par rubrique, le rouage au lieu du mot). Les formulaires (film, livre…) replient « Plus de détails » sur un téléphone.</li>
+          </ul>
+        </div>
+      </details>
+      <details class="version">
+        <summary><span class="version__name">Vitae 1.0.0-rc.35</span><span class="version__date">16 novembre 2026</span></summary>
+        <div class="version__body">
+          <h3>Nouveautés</h3>
+          <ul>
+            <li>Un mode développeur, dans Paramètres › Application › Mode développeur. Une fois activé sur l'appareil, Vitae garde ce qu'il dit dans sa console, ses erreurs et ses demandes au réseau, et cinq onglets les montrent : Console (le journal, et des commandes — « aide » les liste), Réseau (chaque demande, son état, sa durée), Données (chaque domaine, son poids, son contenu à la demande), Système (la version, l'appareil, ce que le navigateur sait faire) et IA (qui peut travailler, dans l'ordre). Sur un téléphone, où il n'y a pas d'outils de développement, c'est la seule manière de voir ce qui se passe.</li>
+            <li>« Copier le rapport » rassemble de quoi décrire un problème : l'appareil, les dernières erreurs, les dernières demandes au réseau. Jamais une donnée personnelle — c'est ce qu'on joint quand on signale un problème.</li>
+          </ul>
+        </div>
+      </details>
+      <details class="version">
+        <summary><span class="version__name">Vitae 1.0.0-rc.34</span><span class="version__date">8 novembre 2026</span></summary>
+        <div class="version__body">
+          <h3>Améliorations</h3>
+          <ul>
+            <li>Les trois manières de remplir une fiche, chacune derrière son pictogramme, une seule montrée à la fois : Décrire (l'IA range ce que vous écrivez), Chercher (sur un site connu), Une adresse (la page d'une fiche que vous avez trouvée). Le bloc était devenu une pile où tout se faisait de l'ombre ; il tient maintenant en trois boutons ronds, et la manière choisie est retenue d'une fiche à l'autre. « Décrire » n'apparaît que si une IA est prête, et se propose alors d'emblée. Sur un téléphone, le pictogramme seul suffit, le mot restant lu par les lecteurs d'écran. La précision technique sur la lecture des pages se replie.</li>
+            <li>Le bloc s'appelle « Remplir cette fiche » et non plus « Remplir depuis le web » : il ne s'agit plus seulement du web.</li>
+            <li>Les réglages (Paramètres › Recherche intelligente) sont rangés dans l'ordre où l'on s'en sert, et chacun dit de quoi il parle : les trois manières, l'IA, les propositions et la traduction, les sites, votre serveur.</li>
+          </ul>
+          <h3>Corrections</h3>
+          <ul>
+            <li>Avec une clé Google, le remplissage par l'IA annonçait que « le service ne répond pas », alors que la connexion avait bien été acceptée. Les modèles Gemini récents réfléchissent avant de répondre, et cette réflexion puise dans le même budget que la réponse : sur une demande à forme imposée, le modèle pouvait y passer tout son temps sans rien rendre. Vitae coupe désormais cette réflexion, se rabat sur le réglage que le modèle accepte, puis sur une demande sans forme imposée s'il le faut ; le schéma envoyé a été simplifié pour la même raison.</li>
+            <li>Le test de connexion éprouve maintenant une vraie demande, pas seulement la clé : une clé valable sur un modèle incapable de rendre ce qu'on lui demande n'est plus présentée comme une connexion qui marche. Il dit aussi quel modèle répond.</li>
+            <li>Les angles du bloc de l'IA étaient droits : il s'appuyait sur un rayon qui n'existe pas dans le système. Tout est repris sur les vrais jetons — pastilles pour les boutons, angles doux pour les blocs.</li>
+          </ul>
+        </div>
+      </details>
+      <details class="version">
+        <summary><span class="version__name">Vitae 1.0.0-rc.33</span><span class="version__date">8 novembre 2026</span></summary>
+        <div class="version__body">
+          <h3>Nouveautés</h3>
+          <ul>
+            <li>Le remplissage intelligent comprend ce que vous écrivez. Dans une fiche — un film, un livre, un album, un morceau, un jeu, une recette, un restaurant — « Décrivez avec vos mots, Vitae remplit » accepte quelques phrases, telles qu'elles viennent : « vu Dune 2 de Denis Villeneuve au ciné en mars, 2 h 46, magnifique, 9/10 ». Chaque chose va à sa place : le titre, le réalisateur, l'année, la durée, les genres, la note. Une recette copiée d'un site devient ses ingrédients et ses étapes ; le dos d'un livre devient son résumé.</li>
+            <li>Rien n'entre dans la fiche sans vous. Avant de remplir, Vitae montre ce qu'il a compris en deux tas : ce qui était écrit noir sur blanc, et ce qu'il a déduit, marqué « à vérifier ». On décoche ce qu'on refuse. Ce qui manquait est dit aussi, plutôt que deviné.</li>
+            <li>L'IA ne complète jamais de mémoire. Elle ne connaît que le texte que vous lui donnez : elle le range, le corrige, le met en forme, convertit « 1 h 30 » en 90 minutes — elle n'ajoute pas une date, un éditeur ni un genre qu'elle croirait savoir de l'œuvre. Ce qu'elle renvoie passe par les mêmes contrôles que n'importe quelle donnée reçue : une année illisible reste une case vide, pas une année inventée.</li>
+            <li>Une seule connexion, une fois pour toutes. Paramètres › Recherche intelligente, « Connecter une IA ». Si votre navigateur sait travailler seul (Chrome récent sur un ordinateur confortable), il n'y a rien à installer et rien ne sort de l'appareil. Sinon, on colle une clé gratuite (Google AI Studio, sans carte bancaire) et c'est fini. Pour qui le veut, n'importe quel service compatible — Groq, OpenRouter, Mistral, ou un modèle sur votre machine — tient dans la même case. Vitae vérifie la connexion avant de la garder, et n'en garde jamais une qui ne répond pas.</li>
+            <li>Vitae choisit tout seul lequel travaille : l'IA de l'appareil quand elle est prête, le service connecté sinon, et l'autre si le premier tombe en panne au mauvais moment. Rien de tout cela ne vous est demandé.</li>
+          </ul>
+        </div>
+      </details>
+      <details class="version">
+        <summary><span class="version__name">Vitae 1.0.0-rc.32</span><span class="version__date">2 novembre 2026</span></summary>
+        <div class="version__body">
+          <h3>Nouveautés</h3>
+          <ul>
+            <li>Livres : un livre peut avoir son PDF, choisi sur l'appareil ou donné par un lien. « Lire », sous le livre et dans sa présentation, ouvre le lecteur de Vitae à la page où l'on s'était arrêté. On y pose des marque-pages, on surligne (en traçant un rectangle sur le passage), on pose une note sur une zone tracée, on écrit au crayon, on gomme ; le panneau réunit le sommaire du PDF, les marque-pages et les notes. Les notes suivent sur vos autres appareils ; le fichier reste sur celui qui l'a reçu. Le lecteur de l'appareil peut remplacer celui de Vitae (Réglages des livres).</li>
+            <li>Vitae pour Linux : un programme à ouvrir (il propose de s'installer dans le menu des applications, pour vous seul), avec les mêmes possibilités que celui de Windows : les dossiers choisis retenus, la recherche intelligente, le PDF d'un livre téléchargé depuis son lien, ouvert au besoin avec une autre application.</li>
+            <li>Des pictogrammes au trait, au lieu des émojis proposés : 155, rangés en 17 thèmes (administratif, études, travail, rendez-vous, engagement et syndicat, amour et couple, famille, cuisine, restaurants et sorties, cinéma et culture, musique et chant, santé, sport, voyages, maison, argent, repères), avec une recherche, des favoris et les derniers choisis. Un émoji reste possible. Paramètres › Apparence remplace d'un geste les émojis courants déjà posés.</li>
+            <li>Partager par QR code : un partage ou la synchronisation se montrent en QR code (après un « Êtes-vous sûr ? ») ; l'autre appareil le scanne avec sa caméra (« Scanner un QR code »), et le lien se pose de lui-même.</li>
+            <li>Restaurants : « J'y suis » cherche les restaurants autour de votre position, le plus proche d'abord.</li>
+            <li>Jeux : la page a tout ce qu'ont les pages de la Culture — la barre, la liste serrée, la présentation d'un jeu avant sa fiche, l'import d'une base (BoardGameGeek, un tableur), la recherche intelligente (Wikipédia, Jeuxvideo.com, BoardGameGeek, MobyGames).</li>
+            <li>La recherche intelligente, ouverte d'emblée quand on ajoute une œuvre, une recette, un restaurant ou un jeu, devient plus complète : - la complétion : en écrivant le titre, des propositions s'ouvrent dessous (le catalogue de la page, les résultats du site choisi, ou Wikipédia) ; en choisir une remplit la fiche d'elle-même ; - les images proposées : les affiches, les couvertures de toutes les éditions d'un livre, les pochettes des éditions d'un album, les boîtes de jeux trouvées ; « Plus d'images » cherche aussi sur les autres sites et sur Wikipédia ; - « Traduire en français » : un résumé, des genres, des étapes trouvés en langue étrangère sont traduits — jamais les titres ni les noms ; - vos propres sites (« + Un site ») et, toujours, l'adresse d'une page à lire.</li>
+            <li>Livres, sur un téléphone : « Scanner un ISBN » lit le code-barres au dos du livre ; la fiche se remplit d'elle-même (le catalogue en ligne, puis la recherche intelligente) ; « Scanner le suivant » à l'enregistrement.</li>
+            <li>Liste de courses : chercher dans un panier, un affichage serré ; un catalogue des prix — le prix de chaque produit dans chaque magasin, au kilo, au litre ou à la pièce, le moins cher en tête ; un produit du catalogue ajouté au panier prend le magasin le moins cher, et une ligne dit « Moins cher chez… ».</li>
+            <li>Comptabilité : le budget commun. Une enveloppe se partage entre plusieurs personnes (60/40, à parts égales…) ; ses sous-enveloppes (nourriture, loyer, sorties…) suivent. Vitae dit qui a payé quoi, ce que chacun a donné et devait, et qui doit combien à qui, même quand chacun ne donne pas autant. Qui a payé : le titulaire du compte, ou la personne choisie dans l'opération ; une rentrée hors compte au nom de quelqu'un est son apport.</li>
+            <li>Flash cards, inspirées de Quizlet : la page d'un deck (nouvelles, en cours, maîtrisées ; ses cartes, à étoiler et à écouter), cinq exercices — Cartes, Apprendre (des choix puis l'écrire, jusqu'à tout savoir), Écrire (une faute de frappe pardonnée et dite), Test (choix, vrai ou faux, écrit, noté), Associer (relier les paires contre la montre) —, les cartes étoilées seules, le sens inversé. L'éditeur : des cartes sur plusieurs lignes, monter, descendre, inverser questions et réponses.</li>
+            <li>Calendrier : ce qui arrive ailleurs dans Vitae s'y affiche à sa date — les échéances de la Comptabilité (et les suivantes), le jour visé par un objectif d'épargne, un panier de courses daté ; chacun s'ouvre dans sa page. Le détail des rendez-vous de Santé (nom, lieu) s'y montre si vous l'autorisez.</li>
+            <li>Recettes : le titre et les étapes sont traduits aussi dans l'application Android et sur Linux (par un traducteur en ligne, si vous le permettez), plus seulement les ingrédients.</li>
+            <li>Rappels : un son au choix (cloche, carillon, note douce, bips, gouttes, celui de l'appareil ou aucun), et la répétition d'un rappel tant qu'on ne l'a pas vu (toutes les 5 minutes à toutes les heures, une à cinq fois).</li>
+          </ul>
+          <h3>Améliorations</h3>
+          <ul>
+            <li>Jeux : une présentation (ce qu'est le jeu), que la recherche intelligente remplit.</li>
+            <li>La liste de courses repensée : l'avancement en tête (une jauge, ce qui reste, les prix), une seule ligne pour ajouter, les magasins et les propositions en rangées, la liste par rayon (un magasin par rayon), des cases rondes, ce qui est coché descend « dans le chariot ». Les paniers en cartes, avec leur jauge.</li>
+            <li>Santé, plus compacte : des gestes rapides en une rangée, « À vérifier » en trois lignes, de petits blocs deux par ligne, les suivis sans donnée récente en une ligne de liens, les pages en cases ; les réglages en six rubriques repliées, chacune disant où elle en est.</li>
+            <li>Les vignettes de la Culture n'ont plus de vide sous un titre court : le statut suit le texte, le cœur se pose sur l'affiche. Les dossiers de Notes tiennent sur une ligne au lieu d'un carré vide.</li>
+            <li>Notes : des feuilles claires, en colonnes qui se remplissent sans trou ; une note ouverte se lit sur une feuille.</li>
+          </ul>
+        </div>
+      </details>
+      <details class="version">
+        <summary><span class="version__name">Vitae 1.0.0-rc.31</span><span class="version__date">2 novembre 2026</span></summary>
+        <div class="version__body">
+          <h3>Nouveautés</h3>
+          <ul>
+            <li>Les Tâches ont six affichages : Vue d'ensemble (la journée et les catégories, comme avant), Aujourd'hui, À venir (les deux semaines à venir, jour par jour), Par catégorie, Tableau (une colonne par catégorie) et Priorités (urgent ou non, important ou non). Le choix est retenu sur l'appareil. Les lignes sont plus serrées ; l'avancement du jour tient en une jauge.</li>
+            <li>Sur l'accueil, « Aujourd'hui » coche une tâche d'un appui, montre l'avancement du jour en jauge, et met ce qui est en retard en premier.</li>
+            <li>La mascotte de l'accueil et le message de bienvenue vont ensemble : la nuit, endormie en mode sommeil, inquiète ou nerveuse quand des tâches sont en retard, ravie quand tout est fait, sereine le matin, complice le week-end, amoureuse quand elle vous revoit… Pendant une recherche ou la lecture du résumé, la phrase dit ce qu'elle fait.</li>
+            <li>Deux nouveaux dessins de la mascotte : la cheffe (Recettes, Suggestion du jour) et la nerveuse (le stress, sur la page Humeur ; trois tâches en retard). Le logo de Vitae, en tête des Paramètres.</li>
+            <li>Comptabilité : la création d'une enveloppe est guidée. On choisit d'abord son genre (budget du mois, projet ponctuel, objectif d'épargne, pour une personne) et un nom tout prêt si on veut ; un aperçu dit ce qui va se passer ; le reste attend sous « Plus d'options ».</li>
+            <li>Comptabilité : une dépense ou une rentrée se note depuis l'enveloppe. Sur un compte, l'opération est enregistrée et rangée dans l'enveloppe. Hors compte, seule l'enveloppe la compte, et aucun compte ne bouge.</li>
+            <li>Comptabilité : les enveloppes ont leur carte parmi les comptes de la synthèse, en pointillés, « hors solde ». Les cartes des comptes sont plus compactes.</li>
+            <li>Cinéma, Livres, Musique : toucher une œuvre (son titre ou son affiche) ouvre sa présentation (l'affiche en grand, ce qu'on en sait, son statut, sa note, son résumé) ; « Modifier » ouvre la fiche.</li>
+            <li>Cinéma, Livres, Musique, Restaurants : une liste plus compacte, et une liste serrée, sans affiches.</li>
+            <li>Livres et Musique : importer une base (un fichier CSV : Goodreads, Babelio, Discogs, un tableur).</li>
+            <li>Musique : la page Morceaux ne montre plus tous les morceaux de tous les albums. On les y ajoute un à un, depuis la présentation d'un album (« Ajouter aux morceaux »), ou un morceau isolé.</li>
+            <li>Restaurants : une galerie de photos, comme le Cinéma (liste serrée, liste, 4 ou 6 par ligne). La photo vient d'OpenStreetMap quand il en connaît une, de la recherche intelligente, ou s'écrit à la main.</li>
+            <li>La recherche intelligente : « Remplir depuis le web », dans un film, un livre, un album, un morceau, une recette ou un restaurant. Vitae cherche sur des sites connus (IMDb, AlloCiné, Babelio, Discogs, Marmiton, TheFork…), lit les premières fiches trouvées, et remplit la vôtre avec ce que la page publie pour être partagée. Elle lit les pages dans l'application Android, dans le programme Windows, ou par votre serveur Vitae ; dans un navigateur seul, elle ouvre la recherche du site dans un nouvel onglet. Paramètres › Recherche intelligente.</li>
+          </ul>
+          <h3>Améliorations</h3>
+          <ul>
+            <li>Le résumé du jour : avec la voix, l'onde s'affiche d'emblée, large, et bouge comme une voix. Le texte est replié (« Lire le texte ») ; en « Texte et voix », le paragraphe qu'on entend s'affiche en sous-titre. Quand l'appareil demande moins de mouvement, l'onde ne bouge plus mais respire, en s'éclairant.</li>
+            <li>Sur un téléphone, l'accueil ne répète plus les raccourcis qui sont déjà dans la barre du bas.</li>
+            <li>Un texte encadré l'est dans un rectangle aux coins légèrement arrondis : un texte long ne touche plus un bord courbe (la recherche de l'accueil, les boutons, les étiquettes, les messages).</li>
+            <li>Les dépenses du mois de la synthèse, en trois chiffres côte à côte.</li>
+          </ul>
+        </div>
+      </details>
+      <details class="version">
+        <summary><span class="version__name">Vitae 1.0.0-rc.30</span><span class="version__date">1 novembre 2026</span></summary>
+        <div class="version__body">
+          <h3>Nouveautés</h3>
+          <ul>
+            <li>La Comptabilité redessinée. La synthèse montre le solde en grand et ce que le mois a ajouté ou retiré. Les comptes sont en cartes, chacun avec son pictogramme. Les dépenses du mois tiennent en une barre de couleurs (une par catégorie), suivie du détail. Les enveloppes qui demandent un regard sont signalées.</li>
+            <li>Les enveloppes ont des barres de leur couleur. Le restant s'affiche en grand. Une barre montre les fonds (dépensé, restant, non affecté). La barre d'un groupe est faite de ses sous-enveloppes, chacune de sa couleur. Un trait marque le temps écoulé du mois : une barre qui le dépasse dépense plus vite que prévu. Un objectif a sa jauge de financement.</li>
+            <li>La mascotte a sept nouveaux caractères : au cinéma (lunettes 3D), studieuse, endormie, dans le noir, sans visage, amoureuse, étonnée. Elle habille les pages qui leur ressemblent (Cinéma, Livres, Flash cards, Auteurs·rices, Sommeil), les pages vides et l'écran verrouillé.</li>
+            <li>Sur la page Humeur, c'est la mascotte qui dit votre humeur, de « Très difficile » à « Super », pour aujourd'hui et les quatorze derniers jours.</li>
+            <li>Une barre en bas de l'écran du téléphone : l'accueil et vos quatre premières pages épinglées, à portée du pouce.</li>
+            <li>Cinéma, Musique, Livres : 4 ou 6 affiches par ligne, ou une liste, d'un appui. La galerie est plus large sur un grand écran.</li>
+            <li>Des animations discrètes : une page qui s'ouvre, un dialogue, un panneau, un message, une case cochée, une jauge qui se remplit.</li>
+          </ul>
+          <h3>Améliorations</h3>
+          <ul>
+            <li>Chaque page a son emblème devant son titre : son pictogramme, ou la mascotte en tenue.</li>
+            <li>Des pictogrammes devant chaque action des menus « ⋯ » et chaque rubrique des Paramètres.</li>
+            <li>Les filtres secondaires se replient sous « Filtres » sur un téléphone : Opérations, Enveloppes, Cinéma, Musique, Livres.</li>
+            <li>Les barres des écrans de la Comptabilité ont leurs pictogrammes et tiennent sur une ligne.</li>
+            <li>Un bloc repliable a un chevron qui pivote.</li>
+            <li>Un message bref ne prend plus l'appui destiné à la page qu'il recouvre : seuls son lien, son action et « Fermer » se touchent.</li>
+          </ul>
+        </div>
+      </details>
+      <details class="version">
+        <summary><span class="version__name">Vitae 1.0.0-rc.29</span><span class="version__date">1 novembre 2026</span></summary>
+        <div class="version__body">
+          <h3>Nouveautés</h3>
+          <ul>
+            <li>La mascotte de Vitae, en haut de l'accueil : la toucher (ou cliquer dessus, ou taper au clavier) ouvre la barre de recherche. Elle a dix-sept humeurs. Elle suit la journée (une tâche en retard l'inquiète, tout fait la ravit), la recherche (attentive quand il y a des résultats, perplexe quand rien ne correspond) et la voix du résumé du jour, qui la fait parler. Tapotée cinq fois d'affilée, elle se fâche, pour de rire.</li>
+            <li>Une nouvelle icône : la mascotte dans un carré blanc arrondi. Pour l'onglet du navigateur, le raccourci, l'application Android et le programme Windows.</li>
+            <li>Un menu. Sur un grand écran, il est à gauche, toujours là, et se réduit à ses pictogrammes. Sur un téléphone ou une tablette, « Menu » l'ouvre en haut à gauche. Les pages épinglées viennent d'abord, puis les rubriques (Quotidien, Santé, Organisation, Étude, Cuisine, Culture) ; les Paramètres sont à part, en bas.</li>
+            <li>L'accueil : un message de bienvenue avec votre prénom (une formule par visite) ; « Aujourd'hui », qui montre les tâches qui restent et l'agenda du jour ; les raccourcis, à choisir et à ordonner (« Choisir les raccourcis »).</li>
+            <li>Le lecteur du résumé du jour : un cadre arrondi et une onde qui bouge pendant la lecture. L'état est écrit en toutes lettres (Prêt, Lecture en cours, En pause, Terminé, Erreur). Les boutons : Pause, Reprendre, Arrêter.</li>
+            <li>Le Calendrier : les filtres sont dans un panneau, à droite sur un grand écran, en bas sur un téléphone. Le bouton « Filtres » dit combien de catégories sont affichées. La vue Liste montre deux semaines ; c'est la vue de départ sur un téléphone.</li>
+            <li>Des pictogrammes (Lucide) à la place des émojis et des signes (✎, ×, ↻, ★, ←…) qui servaient de boutons.</li>
+          </ul>
+          <h3>Améliorations</h3>
+          <ul>
+            <li>Toucher pour modifier, comme pour les notes : une recette, un restaurant, une enveloppe.</li>
+            <li>Sur un écran tactile, les petits boutons ronds se touchent sur 44 px, sans changer de taille à l'écran.</li>
+            <li>Les liens de retour : une flèche et le nom de l'écran où ils mènent.</li>
+            <li>Les messages brefs se posent à côté du menu, jamais dessus.</li>
+          </ul>
+        </div>
+      </details>
+      <details class="version">
+        <summary><span class="version__name">Vitae 1.0.0-rc.28</span><span class="version__date">1 novembre 2026</span></summary>
+        <div class="version__body">
+          <h3>Nouveautés</h3>
+          <ul>
+            <li>Le code se tape au seul pavé de Vitae sur un téléphone : le clavier du téléphone ne s'ouvre pas, et les chiffres du pavé changent de place à chaque fois.</li>
+            <li>Aucun gestionnaire de mots de passe (celui du navigateur, LastPass, 1Password, Bitwarden…) ne propose plus d'enregistrer un secret de Vitae : le code, le mot de passe des sauvegardes, la clé de secours, les clés d'API.</li>
+            <li>Le code se retrouve avec le mot de passe des sauvegardes ou la clé de secours : Paramètres › « Codes cachés » montre d'un coup le code et les clés d'API ; « Code oublié ? » montre le code au lieu de le retirer.</li>
+            <li>Les dossiers de notes en carrés arrondis, qu'on touche ; « Copier les notes du dossier », toutes d'un coup.</li>
+            <li>L'espace entre les paragraphes d'une note (« Normal » ou « Aucun », et pour les nouvelles notes) ; « Retirer les lignes vides du texte ».</li>
+            <li>Surligner et Couleur du texte : un bouton (la dernière couleur, ou la retirer) et sa flèche (les couleurs) ; deux couleurs ou du texte sans couleur se suivent sur une ligne ; un clavier de téléphone reçoit la couleur sur le mot écrit ; « Effacer la mise en forme ».</li>
+          </ul>
+        </div>
+      </details>
+      <details class="version">
+        <summary><span class="version__name">Vitae 1.0.0-rc.27</span><span class="version__date">26 octobre 2026</span></summary>
+        <div class="version__body">
+          <h3>Nouveautés</h3>
+          <ul>
+            <li>Les enveloppes budgétaires, dans la Comptabilité (écran « Enveloppes ») : réservez une part de votre budget aux courses, aux loisirs, à un projet, à une personne ou à un objectif d'épargne — sans créer de compte, sans déplacer d'argent. Le solde de vos comptes reste celui de vos opérations ; les enveloppes disent à quoi vous le destinez.</li>
+            <li>Une dépense se range dans une enveloppe en la saisissant, ou se répartit entre plusieurs (60 € de courses, 40 € d'entretien : une seule dépense de 100 €). Les dépenses sans enveloppe restent dans la comptabilité, « à répartir », et s'affectent ensuite d'un geste, une par une ou plusieurs à la fois.</li>
+            <li>Des groupes et leurs sous-enveloppes (« Vie quotidienne » : courses, transport, loisirs), comptés une seule fois : un groupe de 500 € réparti en 450 € laisse 50 € à répartir — jamais 950 €.</li>
+            <li>Le budget par personne, une personne n'étant pas un compte ; les objectifs d'épargne, et les transferts vers l'épargne qui leur sont reliés (de l'argent mis de côté, jamais une dépense).</li>
+            <li>Ce qui n'est pas dépensé à la fin d'un mois (ou d'une semaine, d'un trimestre, d'une année) : perdu, reporté, reporté jusqu'à un plafond, ou versé à un objectif — une règle de votre budget, jamais une opération.</li>
+          </ul>
+          <h3>Améliorations</h3>
+          <ul>
+            <li>La synthèse de la Comptabilité résume les enveloppes ; la liste des opérations dit l'enveloppe de chaque dépense et se filtre par enveloppe, ou sur « À répartir ».</li>
+            <li>Quand les enveloppes réservent plus que l'argent des comptes retenus, c'est dit, sans rien bloquer ni modifier.</li>
+            <li>Une enveloppe modifiée sur deux appareils en même temps : la version la plus récente est gardée, l'autre est montrée et peut revenir.</li>
+          </ul>
+        </div>
+      </details>
+      <details class="version">
+        <summary><span class="version__name">Vitae 1.0.0-rc.26</span><span class="version__date">26 octobre 2026</span></summary>
+        <div class="version__body">
+          <h3>Nouveautés</h3>
+          <ul>
+            <li>Vitae pour Windows devient une vraie application : ouvrez Vitae.exe une fois, il s'installe pour vous seul (sans droits d'administrateur), avec un raccourci dans le menu Démarrer et sur le Bureau. Vitae s'ouvre ensuite dans sa propre fenêtre, sans navigateur, et garde l'accès aux dossiers que vous choisissez — après la fermeture, après le redémarrage de l'ordinateur, sans le redemander. Vos données ne sont jamais dans le dossier du programme : le mettre à jour ou le désinstaller ne les touche pas. Vous utilisiez Vitae dans un navigateur ? L'application vous guide pour reprendre vos données.</li>
+            <li>Une séance « Importante », d'un appui en tête de sa fiche : elle devient opaque dans les vues, sa couleur gardée. Ce jour seulement, toute la séance, ou toute la série.</li>
+            <li>Réunir deux séances qui sont la même (importée deux fois, de deux fichiers) : Vitae compare ce qui diffère, vous choisissez ce que vous gardez, il n'en reste qu'une — et la réunion se défait. Un doublon probable est signalé, jamais réuni d'office.</li>
+            <li>La mémoire des contenus en ligne : les affiches, couvertures, pochettes, photos de recettes et les fiches des services déjà vues s'affichent tout de suite, même sans connexion, sans être téléchargées de nouveau. Une page la montre, la règle et la vide ; une sauvegarde peut emporter ses images.</li>
+            <li>La sauvegarde forcée du dossier de vos données : écrire tout de suite, puis relire et vérifier chaque fichier ; une réussite n'est annoncée que si tout a été relu. Les versions précédentes du fichier sont gardées, et l'on peut y revenir.</li>
+          </ul>
+          <h3>Améliorations</h3>
+          <ul>
+            <li>Importer un emploi du temps : les séances d'un même cours sont rangées dans un groupe repliable, coché ou décoché d'un appui (une case à trois états dit « une partie ») ; tout cocher, tout décocher, inverser ; une étape de vérification dit exactement ce qui sera importé, avant de l'importer.</li>
+            <li>La couleur d'une séance s'applique à toute sa série (les séances qui ont leur propre couleur ne sont repeintes que si vous le demandez), ou à elle seule.</li>
+            <li>Au Calendrier, sur un téléphone, les emplois du temps tiennent dans une pastille au bout de la rangée des catégories : plus d'heures en vue.</li>
+            <li>Un accès au dossier retiré ou expiré est dit tout de suite, avec de quoi le rétablir ; vos modifications attendent sur l'écran au lieu d'être perdues, et fermer la page avant qu'elles soient écrites demande confirmation.</li>
+          </ul>
+        </div>
+      </details>
+      <details class="version">
+        <summary><span class="version__name">Vitae 1.0.0-rc.25</span><span class="version__date">26 octobre 2026</span></summary>
+        <div class="version__body">
+          <h3>Nouveautés</h3>
+          <ul>
+            <li>Les habitudes : ce qui revient à votre rythme (marcher, lire, des exercices, se coucher à heure fixe…), avec un objectif, un horaire, un rappel et une place au calendrier si vous le voulez. Chaque jour : « Fait », « En partie » ou « Pas aujourd'hui » ; quatre semaines de récit d'un coup d'œil. Pas de série à ne pas briser : un jour sans réponse est « non renseigné », pas un échec.</li>
+            <li>Le temps d'écran, mesuré seulement si vous l'allumez, appareil par appareil. Sur le téléphone Android : l'écran allumé, le temps par application, les déverrouillages, les sessions, si vous ouvrez à Vitae l'accès aux données d'utilisation. Sur un ordinateur : le temps de Vitae lui-même et, avec Chrome ou Edge et votre accord, l'activité de l'ordinateur pendant que Vitae est ouvert. Plusieurs appareils : un moment où deux écrans servaient ensemble ne compte qu'une fois. Suspendre, arrêter, oublier un appareil : tout se fait sur la page.</li>
+            <li>Les tendances : vos suivis semaine après semaine ou mois après mois, et des liens possibles entre eux — écran et sommeil, écran tardif et fatigue, sommeil et humeur, charge mentale et sommeil… —, à partir de 14 jours en commun, dits avec des mots. Une corrélation n'est pas une cause.</li>
+            <li>La nuit en détail : coucher, endormissement, réveil, lever, réveils dans la nuit, siestes, qualité, fatigue, somnolence, ce qui a gêné. Le sommeil estimé n'est plus le temps passé au lit.</li>
+            <li>L'Hydratation en volumes et en boissons : eau, thé, café, lait, jus, soupe… avec leur heure ; un verre et une bouteille à votre mesure ; une restriction prescrite, qui devient un plafond au lieu d'un objectif ; des rappels facultatifs.</li>
+            <li>Les séances d'activité : la sorte, la durée, l'intensité, la distance, la fatigue et la douleur avant et après ; les jours de repos voulus ; la distance estimée de vos pas.</li>
+            <li>L'humeur en détail : énergie, motivation, stress, anxiété, concentration… de 0 à 10 ; la charge mentale que vous ressentez, à côté de ce que Vitae sait de la journée (tâches, rendez-vous, écran), sans jamais les additionner ; un journal personnel. Un jour passé se détaille aussi.</li>
+          </ul>
+          <h3>Améliorations</h3>
+          <ul>
+            <li>Le tableau de bord de Santé gagne trois indicateurs — charge mentale, habitudes du jour, temps d'écran — et dit la qualité des nuits et le temps d'activité noté.</li>
+            <li>L'export de Santé (CSV) contient les nouvelles mesures, chacune avec son unité et sa source.</li>
+            <li>La recherche trouve les habitudes ; le résumé du jour cite celles qui attendent une réponse.</li>
+          </ul>
+        </div>
+      </details>
+      <details class="version">
+        <summary><span class="version__name">Vitae 1.0.0-rc.24</span><span class="version__date">25 octobre 2026</span></summary>
+        <div class="version__body">
+          <h3>Nouveautés</h3>
+          <ul>
+            <li>Une rubrique Santé et son tableau de bord : les traitements du jour, les prochains rendez-vous, les douleurs, le sommeil, les pas, l'eau, l'humeur et le poids, chacun avec sa source et sa période ; « À vérifier » (un renouvellement, un stock bas, une fin de traitement, un symptôme à réévaluer) ; une saisie rapide. Aucun score, aucun diagnostic, et un jour sans donnée n'est jamais compté comme un zéro. Pilulier, Humeur, Sommeil, Pas et Hydratation y sont rangés, sans changer.</li>
+            <li>Un journal des douleurs et des symptômes sur une carte du corps, de face et de dos : touchez où ça fait mal, dites si la douleur irradie et vers où, son intensité de 0 à 10, ce qu'elle gêne. Le reste est facultatif et replié. Le journal la montre ensuite sur le corps et dans le temps.</li>
+            <li>Un profil de santé, tout facultatif : généralités, allergies, antécédents, professionnels, contact d'urgence… avec l'historique de chaque changement, et le poids avec sa courbe.</li>
+            <li>Un calendrier Santé pour les rendez-vous, examens, séances et rappels. Le Calendrier les montre de façon discrète (« Événement Santé »), détaillée ou pas du tout : vous choisissez, depuis le Calendrier ou depuis Santé.</li>
+            <li>Le Pilulier : une fiche pour chaque prise (dénomination, forme, ordonnance, stock, renouvellement, notice), l'heure prévue, et « Préciser la prise » — partielle, reportée, non prise — avec l'heure retenue quand vous cochez.</li>
+          </ul>
+          <h3>Améliorations</h3>
+          <ul>
+            <li>Rien de Santé ne paraît dans Ma journée, le résumé du jour ou la recherche sans votre accord : la question est posée une fois, et la réponse se change dans les réglages de Santé.</li>
+            <li>Sur l'écran verrouillé du téléphone, un rappel de santé s'affiche « Rappel Santé », sans nom ni dose.</li>
+            <li>Chaque page de Santé a son information médicale, que « Compris » replie ; les numéros d'urgence sont toujours là.</li>
+            <li>Un rappel créé depuis le Pilulier va dans le calendrier Santé, plus dans les Tâches.</li>
+          </ul>
+        </div>
+      </details>
+      <details class="version">
+        <summary><span class="version__name">Vitae 1.0.0-rc.23</span><span class="version__date">25 octobre 2026</span></summary>
+        <div class="version__body">
+          <h3>Nouveautés</h3>
+          <ul>
+            <li>Une page Jeux : jeux vidéo, de société, de cartes, de rôle… Chaque sorte a ses statuts — un jeu vidéo peut être « Terminé » sans être « Complété à 100 % », mis « En pause » ou « Abandonné » ; un jeu de société se rejoue, et « + 1 partie » compte vos parties. Une note, une appréciation, une image, vos plateformes, vos heures de jeu.</li>
+            <li>Les Tâches sur une seule page : la journée et les tâches par catégorie, côte à côte sur un ordinateur, l'une sous l'autre sur un téléphone. Plus d'onglets « Journalières » et « Générales ».</li>
+          </ul>
+          <h3>Améliorations</h3>
+          <ul>
+            <li>Calendrier, vue Semaine : chaque jour avec son numéro en grand, la colonne d'aujourd'hui marquée, les demi-heures repérées, les événements teintés de leur couleur et lisibles même serrés, les catégories et les emplois du temps sur une seule rangée : plus d'heures en vue.</li>
+            <li>Calendrier : les tâches et les notes ont des coins arrondis dans toutes les vues, comme les événements, et la liste du jour sous le mois aussi.</li>
+            <li>Pas : quand le téléphone compte vos pas, ajouter ou retirer des pas à la main demande d'abord confirmation, en disant ce que le téléphone avait compté.</li>
+          </ul>
+        </div>
+      </details>
+      <details class="version">
+        <summary><span class="version__name">Vitae 1.0.0-rc.22</span><span class="version__date">19 octobre 2026</span></summary>
+        <div class="version__body">
+          <h3>Nouveautés</h3>
+          <ul>
+            <li>Verrouillage par code : un code de six chiffres verrouille Vitae à l'ouverture, ou seulement les pages que vous choisissez. Un pavé de chiffres pour le doigt, des essais limités, un cadenas en haut de l'écran pour verrouiller d'un appui, et le mot de passe des sauvegardes si vous oubliez le code.</li>
+            <li>Emplacement des données : vos données peuvent vivre dans un dossier de l'ordinateur, ou dans celui que votre Drive synchronise, chiffrées. Le changement se fait en trois étapes — l'emplacement, la sauvegarde (proposée), la copie vérifiée — avec votre mot de passe, et rien n'est effacé d'office.</li>
+            <li>Mode sommeil : « Je vais dormir » en vous couchant, « Je suis réveillé » au lever, et la nuit se note seule dans Sommeil. Pendant le sommeil, le résumé du jour ne se lit pas seul à voix haute.</li>
+            <li>Sur le téléphone, des rappels forcés : ils sonnent ou vibrent même en silencieux, volume à zéro ou en « Ne pas déranger » — le son, la vibration, ou les deux. Une plage horaire du mode sommeil les en dispense.</li>
+            <li>Quand le fuseau horaire change (un voyage), Vitae le dit, dans une bulle et par une notification du téléphone : vos heures suivent le lieu où vous êtes, et les rappels se recalculent.</li>
+            <li>Humeur : un curseur de 0 à 100, dont l'émoji et le nom suivent la position, et le stress à part.</li>
+          </ul>
+          <h3>Améliorations</h3>
+          <ul>
+            <li>Vos anciennes humeurs sont reprises sur le curseur : Difficile 25, Neutre 50, Bien 65, Super 90 ; « Stressé » devient le stress du jour.</li>
+            <li>Le graphique de l'humeur montre la valeur de chaque jour, sur une échelle de 0 à 100.</li>
+            <li>Une page verrouillée ne montre rien d'elle ailleurs tant que Vitae est verrouillé : ni dans la recherche, ni dans le résumé du jour, ni parmi les notes rangées depuis elle.</li>
+          </ul>
+        </div>
+      </details>
+      <details class="version">
+        <summary><span class="version__name">Vitae 1.0.0-rc.21</span><span class="version__date">19 octobre 2026</span></summary>
+        <div class="version__body">
+          <h3>Nouveautés</h3>
+          <ul>
+            <li>Emploi du temps : une nouvelle page pour vos cours, vos horaires de travail, vos activités qui reviennent. Autant d'emplois du temps que vous voulez, chacun avec son nom, sa couleur et ses séances, vus sur un jour, une semaine ou un mois.</li>
+            <li>Importer un emploi du temps depuis un fichier .ics ou un tableau .csv : vous choisissez les colonnes, puis vous vérifiez chaque séance — la cocher, la décocher, la corriger — avant que rien ne soit enregistré. Importer de nouveau le même fichier ne crée pas de doublon.</li>
+            <li>Les séances qui se chevauchent sont marquées « ⇄ », avec ce qu'elles chevauchent. Rien n'est déplacé ni fusionné.</li>
+            <li>Le Calendrier peut montrer un, plusieurs ou tous vos emplois du temps en superposition, en retrait derrière vos événements. Aucun d'abord : c'est vous qui choisissez.</li>
+            <li>Planificateur : une nouvelle page qui réunit votre journée ou votre semaine — événements, séances, tâches —, avec les créneaux libres et les tâches qui attendent un jour.</li>
+            <li>Une tâche peut avoir une heure : elle se place alors au Calendrier à cette heure. Depuis un emploi du temps, on lui ajoute des tâches, chaque jour d'office ou une seule fois.</li>
+            <li>Partager un emploi du temps et toutes ses séances avec une autre personne.</li>
+          </ul>
+          <h3>Améliorations</h3>
+          <ul>
+            <li>Au Calendrier, une tâche est en pointillés et teintée de sa couleur à l'intérieur, dans la grille comme dans la liste du jour sous le mois.</li>
+            <li>Sous le mois, le « ⋯ » d'un événement ou d'une tâche l'annule (ce jour seulement, ou toute la série) et le rétablit.</li>
+            <li>Cinéma, Livres et Restaurants : le « ⋯ » d'une ligne change son statut (« Abandonné », « À éviter »…) sans ouvrir sa fiche.</li>
+            <li>Les rappels d'un emploi du temps se choisissent sur sa page, coupés d'abord.</li>
+            <li>Les réglages de chaque page ont l'allure du sommaire des Paramètres : une surface par rubrique, chaque réglage sur sa ligne, ce qu'il fait en petit dessous, sa case ou sa valeur à droite. Les écrans des Paramètres aussi, et le menu « ⋯ » de chaque page, dont les groupes deviennent des surfaces.</li>
+            <li>Le Planificateur et l'Emploi du temps ont leurs réglages : la journée où chercher des créneaux libres et leur durée ; la superposition au Calendrier et les rappels de chaque emploi du temps, réunis.</li>
+          </ul>
+          <h3>Corrections</h3>
+          <ul>
+            <li>Import d'un fichier .ics : une heure donnée dans le fuseau de l'appareil n'est plus annoncée comme « convertie ».</li>
+          </ul>
+        </div>
+      </details>
+      <details class="version">
+        <summary><span class="version__name">Vitae 1.0.0-rc.20</span><span class="version__date">18 octobre 2026</span></summary>
+        <div class="version__body">
+          <h3>Nouveautés</h3>
+          <ul>
+            <li>Notes : un vrai éditeur. Titres, listes à puces et numérotées, gras, italique, souligné, barré, surlignage et couleur du texte, citations, remarques et encadrés, alignement, dix polices, plein écran, annuler et rétablir.</li>
+            <li>Notes : des images (une adresse https ou un fichier de l'appareil), des tableaux et des graphiques.</li>
+            <li>Notes : des liens vers ce que contient Vitae — un film, une tâche, un événement, une note, une fiche d'auteur, une flash card, une carte mentale ou l'une de ses idées… Un clic montre son aperçu, à jour, sans quitter la note ; « Ouvrir » mène à sa page. Ctrl+K pose un lien.</li>
+            <li>Notes : des dossiers, et « Notes des pages », qui réunit les notes écrites ailleurs dans Vitae (une tâche, un film, un restaurant, la note du jour…), rangées par page, avec le chemin du retour. Sous chacune de ces notes, une case dit si elle est rangée aussi dans Notes.</li>
+            <li>Partager une note, ou un dossier de notes et tout ce qu'il range, avec une autre personne, images comprises.</li>
+          </ul>
+          <h3>Améliorations</h3>
+          <ul>
+            <li>Une note chiffrée (.vitae) garde sa mise en forme et emporte ses images.</li>
+            <li>Les notes de santé (Humeur, Pilulier) ne sont rangées dans Notes que si vous le demandez.</li>
+          </ul>
+          <h3>Corrections</h3>
+          <ul>
+            <li>Dans la liste des notes, l'extrait d'une note n'est plus coupé au milieu d'une ligne sur un petit écran.</li>
+          </ul>
+        </div>
+      </details>
+      <details class="version">
+        <summary><span class="version__name">Vitae 1.0.0-rc.19</span><span class="version__date">18 octobre 2026</span></summary>
+        <div class="version__body">
+          <h3>Nouveautés</h3>
+          <ul>
+            <li>Calendrier : un événement, ou un seul jour d'une série, peut être « annulé » : il reste affiché, grisé et barré, ne rappelle plus rien, et se rétablit. Les tâches aussi.</li>
+            <li>Calendrier : un second affichage du mois, « le texte dans les cases », qui écrit le titre des événements en petit dans chaque jour, même sur un téléphone. L'affichage habituel reste celui par défaut.</li>
+            <li>Courses : les articles courants se modifient. Ajoutez-en, rangez-les en catégories, mettez vos favoris en tête, notez un prix de référence. Un article acheté souvent devient un article courant d'un appui (« Choisir »).</li>
+            <li>Comptabilité : une opération se relie à une liste de courses (bouton « Liste de courses ») ; la liste se lit depuis l'opération, sans être recopiée dans sa note.</li>
+            <li>Livres et Cinéma : le statut « Abandonné ». Restaurants : « À éviter ». Recettes : « Je l'ai faite aujourd'hui », qui dit si une recette est à essayer, faite ou souvent faite.</li>
+          </ul>
+          <h3>Améliorations</h3>
+          <ul>
+            <li>Calendrier : changer la couleur ou l'émoji d'une catégorie demande si les événements et les tâches déjà enregistrés suivent. Les tâches se reconnaissent à leur pointillé dans toutes les vues. Les émojis récents sont proposés d'abord. Le bouton « Tâches et notes » est sur la page.</li>
+            <li>Tâches : une catégorie vide n'occupe plus de place dans les tâches générales ; chaque catégorie s'affiche ou se masque (« Catégories affichées »), et l'on peut masquer toute une liste (réglages de la page).</li>
+            <li>Vingt couleurs, nettement distinctes deux à deux (le rouge, le corail et l'orange ne se confondent plus), dont une ligne de teintes profondes.</li>
+            <li>Courses terminées : le tiers proposé est celui de la Comptabilité ; le nom du magasin ne crée plus de tiers en double.</li>
+            <li>Les dates de création et de modification donnent l'heure.</li>
+          </ul>
+          <h3>Corrections</h3>
+          <ul>
+            <li>Calendrier : un clic sur une flèche pouvait être perdu quand on cliquait vite ; la vue remontait en haut à chaque changement de période.</li>
+          </ul>
+        </div>
+      </details>
+      <details class="version">
+        <summary><span class="version__name">Vitae 1.0.0-rc.18</span><span class="version__date">13 octobre 2026</span></summary>
+        <div class="version__body">
+          <h3>Nouveautés</h3>
+          <ul>
+            <li>Chaque page qui a quelque chose à régler a son écran « Réglages de la page », toujours au même endroit du menu « ⋯ », avec son état écrit à côté (« 8 verres par jour », « Notes sur 10 »). Les Paramètres les réunissent : « Réglages des pages ».</li>
+          </ul>
+          <h3>Améliorations</h3>
+          <ul>
+            <li>Le menu « ⋯ » est rangé de la même façon sur chaque page : les actions, puis Affichage, Fichiers, Réglages et Aide.</li>
+            <li>Effacer beaucoup d'un coup (tout l'historique du sommeil, tous les points, l'historique des tâches terminées) se fait dans les réglages de la page, toujours après une question.</li>
+            <li>L'action principale est à côté du titre sur les Notes, les Tâches, les Restaurants et les listes du Pilulier.</li>
+            <li>Les rappels d'Android s'affichent en bannière, avec le son et la vibration du téléphone ; l'écran Rappels dit comment le téléphone les présente, et mène à ses réglages.</li>
+          </ul>
+          <h3>Corrections</h3>
+          <ul>
+            <li>Comptabilité : une opération, un transfert ou une échéance créés depuis un compte partent de ce compte, et non plus du compte par défaut.</li>
+          </ul>
+        </div>
+      </details>
+      <details class="version">
+        <summary><span class="version__name">Vitae 1.0.0-rc.17</span><span class="version__date">12 octobre 2026</span></summary>
+        <div class="version__body">
+          <h3>Nouveautés</h3>
+          <ul>
+            <li>Rappels : les événements du Calendrier, les tâches à un moment de la journée, les échéances et les prises du Pilulier. Dans l'application Android, de vraies notifications, même Vitae fermé ; dans un navigateur, tant que Vitae est ouvert.</li>
+            <li>Installer une nouvelle version depuis le fichier téléchargé, dans Vitae : « Charger la nouvelle version », dans la notification ou dans Paramètres, « Mises à jour ». Vitae vérifie le fichier avant de l'installer, et l'on peut revenir à la version d'avant.</li>
+            <li>À propos : l'historique de toutes les versions, depuis la toute première, et les informations légales.</li>
+          </ul>
+          <h3>Améliorations</h3>
+          <ul>
+            <li>Vos partages suivent vos appareils : un partage créé sur l'ordinateur arrive sur le téléphone par votre synchronisation (chiffrée), et le téléphone s'y synchronise de lui-même.</li>
+            <li>Les partages se synchronisent bien plus vite : peu après une modification, et toutes les 20 secondes tant que Vitae est à l'écran.</li>
+            <li>« Partagé avec Léa » sur ce qui est partagé, qui mène à la page du partage ; rejoindre un partage se fait en haut de la page Partages, en voyant d'abord qui l'a créé et ce qu'il contient.</li>
+            <li>Paramètres rangés en un sommaire par catégories, chaque ligne disant son état ; la Synchronisation a son écran.</li>
+            <li>L'action principale d'une page (« Ajouter un film ») est un bouton visible à côté du titre.</li>
+          </ul>
+        </div>
+      </details>
+      <details class="version">
+        <summary><span class="version__name">Vitae 1.0.0-rc.16</span><span class="version__date">12 octobre 2026</span></summary>
+        <div class="version__body">
+          <h3>Nouveautés</h3>
+          <ul>
+            <li>Partager une catégorie (ses tâches et ses événements), un panier de courses ou un compte avec une autre personne, par un lien. Ce qui part est chiffré, sur votre propre serveur.</li>
+            <li>Notes : copier une note, et la verrouiller une fois terminée.</li>
+            <li>Courses terminées : le total des articles achetés ou le montant du ticket, et la dépense notée dans la Comptabilité si vous le voulez.</li>
+          </ul>
+          <h3>Améliorations</h3>
+          <ul>
+            <li>Comptabilité : un transfert peut avoir une catégorie ; une opération peut devenir un transfert, et inversement ; un compte se télécharge seul.</li>
+            <li>Courses : Vitae retient ce que vous achetez, avec son dernier prix et son magasin, et le repropose.</li>
+          </ul>
+        </div>
+      </details>
+      <details class="version">
+        <summary><span class="version__name">Vitae 1.0.0-rc.15</span><span class="version__date">11 octobre 2026</span></summary>
+        <div class="version__body">
+          <h3>Améliorations</h3>
+          <ul>
+            <li>Une seule page Tâches, avec deux vues : Journalières et Générales.</li>
+            <li>Comptabilité mieux rangée ; un compte se supprime directement depuis sa ligne, après une question qui dit ce qui part avec lui.</li>
+            <li>Paramètres plus courts : les explications se déplient sous « Détail ».</li>
+            <li>Restaurants : la recherche passe par OpenStreetMap, gratuite et sans clé, à la place de Google.</li>
+          </ul>
+        </div>
+      </details>
+      <details class="version">
+        <summary><span class="version__name">Vitae 1.0.0-rc.14</span><span class="version__date">9 octobre 2026</span></summary>
+        <div class="version__body">
+          <h3>Nouveautés</h3>
+          <ul>
+            <li>Notes : rapides ou complètes, rangées dans une catégorie, un jour ou une échéance ; chacune se télécharge seule, en texte ou chiffrée.</li>
+            <li>Restaurants : vos adresses, vos visites, vos plats et vos avis, et une recherche en ligne.</li>
+            <li>La localisation à l’anticipation (désactivée au départ) : l’accueil propose la page utile selon le lieu et l’heure.</li>
+          </ul>
+          <h3>Améliorations</h3>
+          <ul>
+            <li>Pas : sur Android, le téléphone compte vos pas en continu, même Vitae fermé, si vous le demandez.</li>
+            <li>Couleurs des catégories et des tâches plus vives, toujours lisibles.</li>
+          </ul>
+        </div>
+      </details>
+      <details class="version">
+        <summary><span class="version__name">Vitae 1.0.0-rc.13</span><span class="version__date">9 octobre 2026</span></summary>
+        <div class="version__body">
+          <h3>Nouveautés</h3>
+          <ul>
+            <li>Une seule liste de catégories pour tout Vitae : Calendrier, tâches, rappels et échéances.</li>
+            <li>Pilulier, à la place de Vitamines : vitamines, compléments et médicaments, avec leurs prises.</li>
+            <li>Rappels écrits en une phrase : « Me rappeler de prendre mes vitamines ce soir ».</li>
+          </ul>
+          <h3>Améliorations</h3>
+          <ul>
+            <li>Tâches : un seul système en deux vues, des répétitions communes avec le Calendrier, et les tâches datées affichées au Calendrier.</li>
+          </ul>
+          <h3>Corrections</h3>
+          <ul>
+            <li>Cocher une case ou déplacer une ligne au clavier garde le clavier dessus.</li>
+          </ul>
+        </div>
+      </details>
+      <details class="version">
+        <summary><span class="version__name">Vitae 1.0.0-rc.12</span><span class="version__date">8 octobre 2026</span></summary>
+        <div class="version__body">
+          <h3>Nouveautés</h3>
+          <ul>
+            <li>Calendrier : un événement de plusieurs jours en une seule barre, des catégories et des émojis.</li>
+            <li>Comptabilité : lire les fichiers de Money Manager Ex, QIF et OFX, et exporter en QIF.</li>
+            <li>Ma journée : l’historique des résumés de chaque journée, si vous le voulez.</li>
+            <li>Recettes traduites en français, et des paniers de courses avec magasins et prix notés.</li>
+          </ul>
+          <h3>Améliorations</h3>
+          <ul>
+            <li>Paramètres : une section « Application » avec la version et les mises à jour.</li>
+          </ul>
+        </div>
+      </details>
+      <details class="version">
+        <summary><span class="version__name">Vitae 1.0.0-rc.11</span><span class="version__date">8 octobre 2026</span></summary>
+        <div class="version__body">
+          <h3>Nouveautés</h3>
+          <ul>
+            <li>Graphiques d’évolution sur 7 jours, 30 jours ou 12 mois (Hydratation, Pas, Sommeil, Humeur, tâches).</li>
+            <li>Un guide de première utilisation, en huit courts chapitres.</li>
+            <li>Android : le compteur de pas du téléphone, si vous l’activez.</li>
+          </ul>
+          <h3>Améliorations</h3>
+          <ul>
+            <li>Deux appareils qui modifient la même page ne s’écrasent plus : leurs modifications sont réunies, élément par élément.</li>
+            <li>Restaurer une sauvegarde propose de la réunir avec vos données, ou de les remplacer.</li>
+            <li>Modifier ou supprimer un élément depuis sa ligne, par son « ⋯ ».</li>
+            <li>L’affichage choisi dans une page (vignettes, tri, période) est retenu.</li>
+          </ul>
+          <h3>Corrections</h3>
+          <ul>
+            <li>La recherche des mises à jour trouve enfin le site de Vitae.</li>
+            <li>Un long texte d’aide s’ouvrait sur sa fin.</li>
+            <li>Sur un écran étroit, la priorité et l’échéance d’une tâche se coupaient au milieu d’un mot.</li>
+            <li>La statistique « Catégories » des Généralités affichait toujours « — ».</li>
+          </ul>
+        </div>
+      </details>
+      <details class="version">
+        <summary><span class="version__name">Vitae 1.0.0-rc.10</span><span class="version__date">7 octobre 2026</span></summary>
+        <div class="version__body">
+          <h3>Nouveautés</h3>
+          <ul>
+            <li>Vitae peut chercher au démarrage si une nouvelle version existe (réglage), ou à la demande.</li>
+          </ul>
+          <h3>Améliorations</h3>
+          <ul>
+            <li>Page Données : une explication à déplier sous chaque chose.</li>
+            <li>La marche à suivre pour installer son serveur suit le vrai tableau de bord de Cloudflare.</li>
+          </ul>
+        </div>
+      </details>
+      <details class="version">
+        <summary><span class="version__name">Vitae 1.0.0-rc.9</span><span class="version__date">6 octobre 2026</span></summary>
+        <div class="version__body">
+          <h3>Nouveautés</h3>
+          <ul>
+            <li>Un parcours de premier lancement : commencer une nouvelle utilisation, ou restaurer une ancienne sauvegarde.</li>
+            <li>Synchroniser ses appareils par son propre serveur (Cloudflare), sans autre application.</li>
+            <li>Nouveau logo.</li>
+          </ul>
+          <h3>Améliorations</h3>
+          <ul>
+            <li>Page À propos refaite, et conseils de sauvegarde revus.</li>
+          </ul>
+        </div>
+      </details>
+      <details class="version">
+        <summary><span class="version__name">Vitae 1.0.0-rc.8</span><span class="version__date">6 octobre 2026</span></summary>
+        <div class="version__body">
+          <h3>Nouveautés</h3>
+          <ul>
+            <li>Sauvegardes chiffrées par un mot de passe, avec une clé de secours pour le jour où vous l’oublieriez.</li>
+            <li>Le fichier de synchronisation est chiffré lui aussi.</li>
+            <li>Exporter ses données en clair, après une confirmation, pour les relire sans Vitae.</li>
+          </ul>
+        </div>
+      </details>
+      <details class="version">
+        <summary><span class="version__name">Vitae 1.0.0-rc.7</span><span class="version__date">5 octobre 2026</span></summary>
+        <div class="version__body">
+          <h3>Nouveautés</h3>
+          <ul>
+            <li>Vitae pour Windows : un seul fichier, Vitae.exe.</li>
+            <li>Les émojis en couleur, si vous le voulez.</li>
+            <li>Les échéances des tâches apparaissent au Calendrier.</li>
+          </ul>
+          <h3>Améliorations</h3>
+          <ul>
+            <li>Restaurer demande une confirmation ; une sauvegarde contient tout, clés d’API comprises.</li>
+            <li>Paramètres rangés en trois parties ; la recherche peut se limiter aux pages.</li>
+          </ul>
+          <h3>Corrections</h3>
+          <ul>
+            <li>Sur téléphone, les boutons de la restauration étaient hors de l’écran.</li>
+          </ul>
+        </div>
+      </details>
+      <details class="version">
+        <summary><span class="version__name">Vitae 1.0.0-rc.6</span><span class="version__date">5 octobre 2026</span></summary>
+        <div class="version__body">
+          <h3>Améliorations</h3>
+          <ul>
+            <li>L’accueil ne garde que la recherche, posée à une hauteur fixe.</li>
+            <li>Le résumé du jour : en texte, à voix haute, ou les deux ; il se replie.</li>
+          </ul>
+        </div>
+      </details>
+      <details class="version">
+        <summary><span class="version__name">Vitae 1.0.0-rc.5</span><span class="version__date">5 octobre 2026</span></summary>
+        <div class="version__body">
+          <h3>Nouveautés</h3>
+          <ul>
+            <li>Le logo de Vitae ; le logo IMDb devant les notes IMDb du Cinéma.</li>
+            <li>Le résumé du jour salue par votre prénom, et peut se lire seul à la première ouverture de la journée.</li>
+          </ul>
+          <h3>Améliorations</h3>
+          <ul>
+            <li>Tous les réglages du résumé du jour sont dans les Paramètres.</li>
+            <li>Flash cards : supprimer une carte ou un deck sans chercher.</li>
+          </ul>
+        </div>
+      </details>
+      <details class="version">
+        <summary><span class="version__name">Vitae 1.0.0-rc.4</span><span class="version__date">4 octobre 2026</span></summary>
+        <div class="version__body">
+          <h3>Nouveautés</h3>
+          <ul>
+            <li>Collections : le matériel, les objectifs et les ressources d’une activité.</li>
+            <li>Le résumé du jour : ce qui est à faire, ce qui arrive bientôt, la météo, écrit sur l’appareil et lu à voix haute.</li>
+          </ul>
+          <h3>Améliorations</h3>
+          <ul>
+            <li>Android : la voix du téléphone lit le résumé du jour.</li>
+          </ul>
+        </div>
+      </details>
+      <details class="version">
+        <summary><span class="version__name">Vitae 1.0.0-rc.3</span><span class="version__date">4 octobre 2026</span></summary>
+        <div class="version__body">
+          <h3>Nouveautés</h3>
+          <ul>
+            <li>Calendrier, Musique et Livres.</li>
+            <li>Une recherche qui trouve dans tout Vitae : films, tâches, recettes, opérations…</li>
+            <li>Un fichier de synchronisation, à ranger où l’on veut, pour réunir plusieurs appareils.</li>
+          </ul>
+          <h3>Améliorations</h3>
+          <ul>
+            <li>Accueil réduit à la recherche ; les paramètres derrière le rouage, en haut à gauche.</li>
+            <li>Chaque page montre d’abord son contenu ; ses actions sont dans le menu « ⋯ ».</li>
+            <li>La recherche reste rapide avec des milliers d’éléments.</li>
+          </ul>
+        </div>
+      </details>
+      <details class="version">
+        <summary><span class="version__name">Vitae 1.0.0-rc.2</span><span class="version__date">3 octobre 2026</span></summary>
+        <div class="version__body">
+          <h3>Nouveautés</h3>
+          <ul>
+            <li>Comptabilité : comptes, opérations, transferts, budgets, échéances, pointage et graphiques.</li>
+            <li>L’application Android.</li>
+          </ul>
+          <h3>Améliorations</h3>
+          <ul>
+            <li>Les pages de l’accueil peuvent être masquées.</li>
+            <li>Sur téléphone, la recherche n’ouvre plus le clavier d’elle-même.</li>
+          </ul>
+        </div>
+      </details>
+      <details class="version">
+        <summary><span class="version__name">Vitae 1.0.0-rc.1</span><span class="version__date">3 octobre 2026</span></summary>
+        <div class="version__body">
+          <h3>Améliorations</h3>
+          <ul>
+            <li>Nouveau design, plus rond : boutons et champs en pastilles, listes en surfaces arrondies, toujours en noir, blanc et gris.</li>
+            <li>La police Jost, incluse dans l’application.</li>
+            <li>En haut de chaque page, les autres pages de la même rubrique.</li>
+          </ul>
+        </div>
+      </details>
+      <details class="version">
+        <summary><span class="version__name">Vitae 1.0.0-alpha.5</span><span class="version__date">3 octobre 2026</span></summary>
+        <div class="version__body">
+          <h3>Nouveautés</h3>
+          <ul>
+            <li>Cuisine : une suggestion de repas chaque jour (75 recettes fournies, sans connexion), vos recettes, le catalogue en ligne TheMealDB et une liste de courses.</li>
+          </ul>
+          <h3>Corrections</h3>
+          <ul>
+            <li>Un texte qui débordait dans Auteurs·trices.</li>
+          </ul>
+        </div>
+      </details>
+      <details class="version">
+        <summary><span class="version__name">Vitae 1.0.0-alpha.4</span><span class="version__date">3 octobre 2026</span></summary>
+        <div class="version__body">
+          <h3>Nouveautés</h3>
+          <ul>
+            <li>Cartes mentales : un éditeur à la souris, au doigt et au clavier, avec annuler et rétablir.</li>
+            <li>Une carte se crée depuis un plan écrit, et s’exporte en image, en plan ou en fichier.</li>
+          </ul>
+        </div>
+      </details>
+      <details class="version">
+        <summary><span class="version__name">Vitae 1.0.0-alpha.3</span><span class="version__date">3 octobre 2026</span></summary>
+        <div class="version__body">
+          <h3>Nouveautés</h3>
+          <ul>
+            <li>Flash cards : decks, dossiers, étude, import de texte et de fichiers.</li>
+            <li>Auteurs·trices : des fiches, que Wikipédia peut remplir.</li>
+            <li>Chrono et Pomodoro, qui restent exacts quand l’onglet est en arrière-plan.</li>
+          </ul>
+        </div>
+      </details>
+      <details class="version">
+        <summary><span class="version__name">Vitae 1.0.0-alpha.2</span><span class="version__date">2 octobre 2026</span></summary>
+        <div class="version__body">
+          <h3>Nouveautés</h3>
+          <ul>
+            <li>Ma journée, Généralités et Liens.</li>
+            <li>Cinéma : votre cinémathèque, l’import d’un tableau, les affiches, et des fiches complétées depuis OMDb ou TMDB.</li>
+            <li>Quinze couleurs pour repérer tâches et catégories.</li>
+          </ul>
+        </div>
+      </details>
+      <details class="version">
+        <summary><span class="version__name">Vitae 1.0.0-alpha.1</span><span class="version__date">2 octobre 2026</span></summary>
+        <div class="version__body">
+          <h3>Nouveautés</h3>
+          <ul>
+            <li>Première version de Vitae, issue de l’ancienne application : vos données y sont copiées, l’ancienne n’est pas modifiée.</li>
+            <li>Hydratation, Sommeil, Humeur, Pas, Vitamines, Vie, Tâches du jour, Paramètres, Données et À propos.</li>
+            <li>Sauvegarder et restaurer toutes ses données, avec un récapitulatif avant de remplacer quoi que ce soit.</li>
+          </ul>
+        </div>
+      </details>
+    </div>
+  </section>
+
   <section class="block" id="auteur" aria-labelledby="titre-auteur">
     <div class="wrap author">
       <h2 id="titre-auteur" style="margin:0">Auteur</h2>
@@ -228,6 +1074,14 @@ footer { padding-block: 2.5rem 3rem; color: var(--faint); font-size: 0.95rem; bo
     element.addEventListener('focusin', () => show(element.dataset.mood));
     element.addEventListener('focusout', () => show(resting));
   }
+  // L'historique est une page à part : on l'affiche seul quand l'adresse finit par « #historique ».
+  const route = () => {
+    const page = location.hash === '#historique';
+    document.body.classList.toggle('is-history', page);
+    if (page) window.scrollTo(0, 0);
+  };
+  addEventListener('hashchange', route);
+  route();
   const cycle = ['content', 'joyeux', 'complice', 'ravi', 'surpris', 'malicieux'];
   button.addEventListener('click', () => {
     resting = cycle[(cycle.indexOf(resting) + 1) % cycle.length];
