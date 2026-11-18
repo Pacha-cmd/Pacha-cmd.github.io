@@ -114,42 +114,42 @@ footer { padding-block: 2.5rem 3rem; color: var(--faint); font-size: 0.95rem; bo
         <li class="download" data-mood="joyeux">
           <span class="download__name">Android</span>
           <span class="download__detail">Téléphone ou tablette, Android 7 ou plus récent</span>
-          <a class="download__get" href="telechargements/Vitae-2.0.0-rc.7.apk" download>Télécharger <small>2,1 Mo</small></a>
+          <a class="download__get" href="https://mega.nz/file/5RVhmQrb#-mUaIaQMidYK4MjPdPg4iviypfxgXLdw9qwTY37ju_E" download>Télécharger <small>2,1 Mo</small></a>
         </li>
         <li class="download" data-mood="malicieux">
           <span class="download__name">Linux</span>
           <span class="download__detail">Ubuntu, Debian, Fedora, Arch… (64 bits)</span>
-          <a class="download__get" href="telechargements/Vitae-2.0.0-rc.7-linux.tar.gz" download>Télécharger <small>1,9 Mo</small></a>
+          <a class="download__get" href="https://mega.nz/file/EIURyCgD#C13pKonNZhap0TS_YYEVwo3xjs5YcXIp7VrJZ5HVBl0" download>Télécharger <small>1,9 Mo</small></a>
         </li>
         <li class="download" data-mood="complice">
           <span class="download__name">Windows (programme d’installation)</span>
           <span class="download__detail">Windows 10 ou 11 (64 bits) : un assistant, « Installer » puis « Terminer »</span>
-          <a class="download__get" href="telechargements/Vitae-2.0.0-rc.7-installation.exe" download>Télécharger <small>1,8 Mo</small></a>
+          <a class="download__get" href="https://mega.nz/file/pMl1mb7R#KfOQ9IIIBXZr6R0TMSeS3xUIumUUPSSJDECA7us7Zcg" download>Télécharger <small>1,8 Mo</small></a>
         </li>
         <li class="download" data-mood="complice">
           <span class="download__name">Windows (le programme seul)</span>
           <span class="download__detail">Le même, sans assistant : il propose de s’installer à son premier lancement</span>
-          <a class="download__get" href="telechargements/Vitae-2.0.0-rc.7.exe" download>Télécharger <small>5,4 Mo</small></a>
+          <a class="download__get" href="https://mega.nz/file/4ZF2yCCZ#7KzxrVgYWPgGQn7AWfZbxTpnSU6WS7qlLpHx9IFwCDo" download>Télécharger <small>5,4 Mo</small></a>
         </li>
         <li class="download" data-mood="joyeux">
           <span class="download__name">VitaePDF (Android)</span>
           <span class="download__detail">Un lecteur de PDF léger, en complément : à installer à part, sans aucune autorisation</span>
-          <a class="download__get" href="telechargements/VitaePDF-2.0.0-rc.7.apk" download>Télécharger <small>16 Ko</small></a>
+          <a class="download__get" href="https://mega.nz/file/dMlQhYSC#azHYkv1u89hIoQaiDDxTkKNQqRZYvW6SxH452SJeysU" download>Télécharger <small>16 Ko</small></a>
         </li>
         <li class="download" data-mood="attentif">
           <span class="download__name">Dans un navigateur</span>
           <span class="download__detail">Une seule page, à ouvrir avec Chrome, Edge, Firefox ou Safari</span>
-          <a class="download__get" href="telechargements/Vitae.html" download>Télécharger <small>5,1 Mo</small></a>
+          <a class="download__get" href="https://mega.nz/file/BU9SnJhY#-Ob5BzwOsaOWA0syr53xt2LxsaHjYnel6-tgv9MhsnU" download>Télécharger <small>5,1 Mo</small></a>
         </li>
         <li class="download" data-mood="joyeux">
           <span class="download__name">iPhone et iPad</span>
           <span class="download__detail">Ouvrez Vitae dans Safari, puis Partager › « Sur l’écran d’accueil » : plein écran, hors ligne</span>
-          <a class="download__get" href="app/">Ouvrir Vitae</a>
+          <a class="download__get" href="https://mega.nz/file/BU9SnJhY#-Ob5BzwOsaOWA0syr53xt2LxsaHjYnel6-tgv9MhsnU">Ouvrir Vitae</a>
         </li>
         <li class="download" data-mood="attentif">
           <span class="download__name">Mac</span>
           <span class="download__detail">Ouvrez Vitae dans Safari, puis Fichier › « Ajouter au Dock » (ou « Installer » dans Chrome et Edge)</span>
-          <a class="download__get" href="app/">Ouvrir Vitae</a>
+          <a class="download__get" href="https://mega.nz/file/BU9SnJhY#-Ob5BzwOsaOWA0syr53xt2LxsaHjYnel6-tgv9MhsnU">Ouvrir Vitae</a>
         </li>
       </ul>
     </div>
