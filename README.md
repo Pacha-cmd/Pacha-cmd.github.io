@@ -164,12 +164,12 @@ footer { padding-block: 2.5rem 3rem; color: var(--faint); font-size: 0.95rem; bo
         <li class="download" data-mood="joyeux">
           <span class="download__name">iPhone et iPad</span>
           <span class="download__detail">Ouvrez Vitae dans Safari, puis Partager › « Sur l’écran d’accueil » : plein écran, hors ligne</span>
-          <a class="download__get" href="https://mega.nz/folder/QAc1FTbS#43ftzV4z4cYbIub75j6azQ" target="_blank" rel="noopener noreferrer">Ouvrir Vitae</a>
+          <a class="download__get" href="https://mega.nz/folder/QAc1FTbS#43ftzV4z4cYbIub75j6azQ" target="_blank" rel="noopener noreferrer">Télécharger</a>
         </li>
         <li class="download" data-mood="attentif">
           <span class="download__name">Mac</span>
           <span class="download__detail">Ouvrez Vitae dans Safari, puis Fichier › « Ajouter au Dock » (ou « Installer » dans Chrome et Edge)</span>
-          <a class="download__get" href="https://mega.nz/folder/QAc1FTbS#43ftzV4z4cYbIub75j6azQ" target="_blank" rel="noopener noreferrer">Ouvrir Vitae</a>
+          <a class="download__get" href="https://mega.nz/folder/QAc1FTbS#43ftzV4z4cYbIub75j6azQ" target="_blank" rel="noopener noreferrer">Télécharger</a>
         </li>
       </ul>
     </div>
@@ -243,8 +243,8 @@ footer { padding-block: 2.5rem 3rem; color: var(--faint); font-size: 0.95rem; bo
             <li>iPhone et iPad. Vitae s'installe depuis Safari, sans App Store : ouvrir pacha-cmd.github.io/app/, toucher Partager, puis « Sur l'écran d'accueil ». Vitae a alors son icône, s'ouvre en plein écran et marche sans réseau ; vos données restent sur l'appareil. Au premier passage dans Safari, Vitae dit où toucher.</li>
             <li>Mac. La même application web : dans Safari, Fichier › « Ajouter au Dock » (macOS Sonoma ou plus récent) ; dans Chrome ou Edge, « Installer » — Vitae le propose d'un message. Elle s'ouvre dans sa fenêtre, depuis le Dock ou le Launchpad, même hors ligne.</li>
             <li>Les mises à jour de l'application web se font seules : une nouvelle version publiée se télécharge à l'ouverture suivante, puis Vitae propose « Relancer ». Elle ne s'impose jamais pendant qu'on écrit.</li>
-            <li>Windows : un programme d'installation. Vitae-2.0.0-rc.6-installation.exe est un assistant habituel, en français et sans droits d'administrateur (Bienvenue, Installer, puis « Ouvrir Vitae »). L'installation est la même que celle de Vitae.exe, qui reste proposé seul : mêmes raccourcis, même désinstallation par « Applications installées », données jamais touchées. Il met à jour une version plus ancienne et n'écrase jamais une plus récente. Pour un déploiement, /S installe sans question.</li>
-            <li>Le site propose les deux fichiers de Windows, et un bouton « Ouvrir Vitae » pour l'iPhone, l'iPad et le Mac, avec la marche à suivre.</li>
+            <li>Windows : un programme d'installation. Vitae-2.0.0-rc.6-installation.exe est un assistant habituel, en français et sans droits d'administrateur (Bienvenue, Installer, puis « télécharger »). L'installation est la même que celle de Vitae.exe, qui reste proposé seul : mêmes raccourcis, même désinstallation par « Applications installées », données jamais touchées. Il met à jour une version plus ancienne et n'écrase jamais une plus récente. Pour un déploiement, /S installe sans question.</li>
+            <li>Le site propose les deux fichiers de Windows, et un bouton « Télécharger » pour l'iPhone, l'iPad et le Mac, avec la marche à suivre.</li>
           </ul>
         </div>
       </details>
